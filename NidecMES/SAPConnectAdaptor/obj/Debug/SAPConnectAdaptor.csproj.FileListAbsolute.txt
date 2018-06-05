@@ -1,0 +1,14 @@
+D:\NIDEC MES\fw\NidecMES\Dll\log4net.xml
+D:\NIDEC MES\fw\NidecMES\Dll\Properties\Resources.resx
+D:\NIDEC MES\fw\NidecMES\Dll\Properties\Resources.Designer.cs
+D:\NIDEC MES\fw\NidecMES\Dll\Properties\Settings.Designer.cs
+D:\NIDEC MES\fw\NidecMES\Dll\Properties\Settings.settings
+D:\NIDEC MES\fw\NidecMES\Dll\SAPConnectAdaptor.exe.config
+D:\NIDEC MES\fw\NidecMES\Dll\SAPConnectAdaptor.exe
+D:\NIDEC MES\fw\NidecMES\Dll\SAPConnectAdaptor.pdb
+D:\NIDEC MES\fw\NidecMES\SAPConnectAdaptor\obj\Debug\SAPConnectAdaptor.csprojResolveAssemblyReference.cache
+D:\NIDEC MES\fw\NidecMES\SAPConnectAdaptor\obj\Debug\Com.Nidec.Mes.SAPConnectAdaptor.Properties.Resources.resources
+D:\NIDEC MES\fw\NidecMES\SAPConnectAdaptor\obj\Debug\Com.Nidec.Mes.SAPConnectAdaptor.SAPSyncFrom.resources
+D:\NIDEC MES\fw\NidecMES\SAPConnectAdaptor\obj\Debug\SAPConnectAdaptor.csproj.GenerateResource.Cache
+D:\NIDEC MES\fw\NidecMES\SAPConnectAdaptor\obj\Debug\SAPConnectAdaptor.exe
+D:\NIDEC MES\fw\NidecMES\SAPConnectAdaptor\obj\Debug\SAPConnectAdaptor.pdb

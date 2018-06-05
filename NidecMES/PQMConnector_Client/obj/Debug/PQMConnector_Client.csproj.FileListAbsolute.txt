@@ -1,0 +1,11 @@
+D:\NIDEC MES\fw\NidecMES\Dll\PQMConnector_Client.dll.config
+D:\NIDEC MES\fw\NidecMES\Dll\PQMConnector_Client.dll
+D:\NIDEC MES\fw\NidecMES\Dll\PQMConnector_Client.pdb
+D:\NIDEC MES\fw\NidecMES\PQMConnector_Client\obj\Debug\PQMConnector_Client.csprojResolveAssemblyReference.cache
+D:\NIDEC MES\fw\NidecMES\PQMConnector_Client\obj\Debug\Com.Nidec.Mes.PQMConnector_Client.Properties.Resources.resources
+D:\NIDEC MES\fw\NidecMES\PQMConnector_Client\obj\Debug\PQMConnector_Client.csproj.GenerateResource.Cache
+D:\NIDEC MES\fw\NidecMES\PQMConnector_Client\obj\Debug\PQMConnector_Client.dll
+D:\NIDEC MES\fw\NidecMES\PQMConnector_Client\obj\Debug\PQMConnector_Client.pdb
+D:\NIDEC MES\fw\NidecMES\Dll\zh-Hans\PQMConnector_Client.resources.dll
+D:\NIDEC MES\fw\NidecMES\PQMConnector_Client\obj\Debug\Com.Nidec.Mes.PQMConnector_Client.Properties.Resources.zh-Hans.resources
+D:\NIDEC MES\fw\NidecMES\PQMConnector_Client\obj\Debug\zh-Hans\PQMConnector_Client.resources.dll

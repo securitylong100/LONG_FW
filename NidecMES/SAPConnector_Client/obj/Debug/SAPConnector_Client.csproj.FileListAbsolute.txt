@@ -1,0 +1,11 @@
+D:\NIDEC MES\fw\NidecMES\Dll\SAPConnector_Client.dll.config
+D:\NIDEC MES\fw\NidecMES\Dll\SAPConnector_Client.dll
+D:\NIDEC MES\fw\NidecMES\Dll\SAPConnector_Client.pdb
+D:\NIDEC MES\fw\NidecMES\SAPConnector_Client\obj\Debug\SAPConnector_Client.csprojResolveAssemblyReference.cache
+D:\NIDEC MES\fw\NidecMES\SAPConnector_Client\obj\Debug\Com.Nidec.Mes.SAPConnector_Client.Properties.Resources.resources
+D:\NIDEC MES\fw\NidecMES\SAPConnector_Client\obj\Debug\SAPConnector_Client.csproj.GenerateResource.Cache
+D:\NIDEC MES\fw\NidecMES\SAPConnector_Client\obj\Debug\SAPConnector_Client.dll
+D:\NIDEC MES\fw\NidecMES\SAPConnector_Client\obj\Debug\SAPConnector_Client.pdb
+D:\NIDEC MES\fw\NidecMES\Dll\zh-Hans\SAPConnector_Client.resources.dll
+D:\NIDEC MES\fw\NidecMES\SAPConnector_Client\obj\Debug\Com.Nidec.Mes.SAPConnector_Client.Properties.Resources.zh-Hans.resources
+D:\NIDEC MES\fw\NidecMES\SAPConnector_Client\obj\Debug\zh-Hans\SAPConnector_Client.resources.dll

@@ -1,0 +1,2459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E823D53-212F-45AD-B9C2-CA488F10F0EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Com.Nidec.Mes.GlobalMasterMaintenance</RootNamespace>
+    <AssemblyName>GlobalMasterMaintenance</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Dll\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Dll\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cbm\AuthorityControl\CheckAuthorityControlRelationCbm.cs" />
+    <Compile Include="Cbm\AuthorityControl\CheckAuthorityControlMasterMntCbm.cs" />
+    <Compile Include="Cbm\AuthorityControl\DeleteAuthorityControlMasterMntCbm.cs" />
+    <Compile Include="Cbm\AuthorityControl\UpdateAuthorityControlMasterMntCbm.cs" />
+    <Compile Include="Cbm\AuthorityControl\AddAuthorityControlMasterMntCbm.cs" />
+    <Compile Include="Cbm\AuthorityControl\GetAuthorityControlMasterMntCbm.cs" />
+    <Compile Include="Cbm\Building\AddBuildingMasterMntCbm.cs" />
+    <Compile Include="Cbm\Building\CheckBuildingRelationCbm.cs" />
+    <Compile Include="Cbm\Building\CheckBuildingMasterMntCbm.cs" />
+    <Compile Include="Cbm\Building\DeleteBuildingMasterMntCbm.cs" />
+    <Compile Include="Cbm\Building\GetBuildingMasterMntCbm.cs" />
+    <Compile Include="Cbm\Building\UpdateBuildingMasterMntCbm.cs" />
+    <Compile Include="Cbm\CastingMachineFurnace\AddCastingMachineFurnaceMasterMntCbm.cs" />
+    <Compile Include="Cbm\CastingMachineFurnace\CheckCastingMachineFurnaceMasterMntCbm.cs" />
+    <Compile Include="Cbm\CastingMachineFurnace\CheckCastingMachineFurnaceRelationCbm.cs" />
+    <Compile Include="Cbm\CastingMachineFurnace\DeleteCastingMachineFurnaceMasterMntCbm.cs" />
+    <Compile Include="Cbm\CastingMachineFurnace\GetCastingMachineFurnaceMasterMntCbm.cs" />
+    <Compile Include="Cbm\CastingMachineFurnace\UpdateCastingMachineFurnaceMasterMntCbm.cs" />
+    <Compile Include="Cbm\CastingMachine\AddCastingMachineMasterMntCbm.cs" />
+    <Compile Include="Cbm\CastingMachine\CheckCastingMachineMasterMntCbm.cs" />
+    <Compile Include="Cbm\CastingMachine\DeleteCastingMachineMasterMntCbm.cs" />
+    <Compile Include="Cbm\CastingMachine\GetCastingMachineMasterMntCbm.cs" />
+    <Compile Include="Cbm\CastingMachine\UpdateCastingMachineMasterMntCbm.cs" />
+    <Compile Include="Cbm\CauseMasterCbm\AddCauseCbm.cs" />
+    <Compile Include="Cbm\CauseMasterCbm\DeleteCauseCbm.cs" />
+    <Compile Include="Cbm\CauseMasterCbm\GetCauseCbm.cs" />
+    <Compile Include="Cbm\Cavity\GetCavityMasterMntCbm.cs" />
+    <Compile Include="Cbm\Cavity\AddCavityMasterMntCbm.cs" />
+    <Compile Include="Cbm\Cavity\CheckCavityMasterMntCbm.cs" />
+    <Compile Include="Cbm\Cavity\DeleteCavityMasterMntCbm.cs" />
+    <Compile Include="Cbm\Cavity\GetCavityMasterMntWithModelCbm.cs" />
+    <Compile Include="Cbm\Cavity\UpdateCavityMasterMntCbm.cs" />
+    <Compile Include="Cbm\CountryLanguage\CheckCountryLanguagCheckRelationCbm.cs" />
+    <Compile Include="Cbm\CountryLanguage\CheckCountryLanguageMasterMntCbm.cs" />
+    <Compile Include="Cbm\CountryLanguage\UpdateCountryLanguageMasterMntCbm.cs" />
+    <Compile Include="Cbm\CountryLanguage\DeleteCountryLanguageMasterMntCbm.cs" />
+    <Compile Include="Cbm\CountryLanguage\AddCountryLanguageMasterMntCbm.cs" />
+    <Compile Include="Cbm\CountryLanguage\GetCountryLanguageMasterMntCbm.cs" />
+    <Compile Include="Cbm\Customer\AddCustomerMasterMntCbm.cs" />
+    <Compile Include="Cbm\Customer\CheckCustomerMasterMntCbm.cs" />
+    <Compile Include="Cbm\Customer\DeleteCustomerMasterMntCbm.cs" />
+    <Compile Include="Cbm\Customer\GetCustomerMasterMntCbm.cs" />
+    <Compile Include="Cbm\Customer\UpdateCustomerMasterMntCbm.cs" />
+    <Compile Include="Cbm\DefectiveReason\AddDefectiveReasonMasterMntCbm.cs" />
+    <Compile Include="Cbm\DefectiveReason\CheckDisplayRecordMasterMntCbm.cs" />
+    <Compile Include="Cbm\DefectiveReason\CheckDefectiveReasonMasterMntCbm.cs" />
+    <Compile Include="Cbm\DefectiveReason\CheckDefectiveReasonRelationCbm.cs" />
+    <Compile Include="Cbm\DefectiveReason\DeleteDefectiveReasonMasterMntCbm.cs" />
+    <Compile Include="Cbm\DefectiveReason\GetDefectiveReasonMasterMntCbm.cs" />
+    <Compile Include="Cbm\DefectiveReason\UpdateDefectiveReasonMasterMntCbm.cs" />
+    <Compile Include="Cbm\DrawMasterCbm\AddDrawCbm.cs" />
+    <Compile Include="Cbm\DrawMasterCbm\CheckDrawCbm.cs" />
+    <Compile Include="Cbm\DrawMasterCbm\DeleteDrawCbm.cs" />
+    <Compile Include="Cbm\DrawMasterCbm\GetDrawCbm.cs" />
+    <Compile Include="Cbm\DrawMasterCbm\UpdateDrawCbm.cs" />
+    <Compile Include="Cbm\Employee\AddEmployeeMasterMntCbm.cs" />
+    <Compile Include="Cbm\Employee\CheckEmployeeMasterMntCbm.cs" />
+    <Compile Include="Cbm\Employee\DeleteEmployeeMasterMntCbm.cs" />
+    <Compile Include="Cbm\Employee\GetEmployeeMasterMntCbm.cs" />
+    <Compile Include="Cbm\Employee\UpdateEmployeeMasterMntCbm.cs" />
+    <Compile Include="Cbm\Equipment\AddEquipmentMasterMntCbm.cs" />
+    <Compile Include="Cbm\Equipment\CheckEquipmentMasterMntCbm.cs" />
+    <Compile Include="Cbm\Equipment\CheckEquipmentRelationCbm.cs" />
+    <Compile Include="Cbm\Equipment\DeleteEquipmentMasterMntCbm.cs" />
+    <Compile Include="Cbm\Equipment\GetEquipmentMasterMntCbm.cs" />
+    <Compile Include="Cbm\Equipment\UpdateEquipmentMasterMntCbm.cs" />
+    <Compile Include="Cbm\Factory\AddFactoryMasterMntCbm.cs" />
+    <Compile Include="Cbm\Factory\CheckFactoryRelationCbm.cs" />
+    <Compile Include="Cbm\Factory\CheckFactoryMasterMntCbm.cs" />
+    <Compile Include="Cbm\Factory\DeleteFactoryMasterMntCbm.cs" />
+    <Compile Include="Cbm\Factory\GetFactoryMasterMntCbm.cs" />
+    <Compile Include="Cbm\Factory\UpdateFactoryMasterMntCbm.cs" />
+    <Compile Include="Cbm\GroupMachine\AddGroupMachineCbm.cs" />
+    <Compile Include="Cbm\GroupMachine\CheckGroupMachineCbm.cs" />
+    <Compile Include="Cbm\GroupMachine\DeleteGroupMachineCbm.cs" />
+    <Compile Include="Cbm\GroupMachine\GetGroupMachineNameCbm.cs" />
+    <Compile Include="Cbm\GroupMachine\GetGroupMachineCbm.cs" />
+    <Compile Include="Cbm\GroupMachine\UpdateGroupMachineCbm.cs" />
+    <Compile Include="Cbm\ItemProcessWork\AddItemProcessWorkMasterMntCbm.cs" />
+    <Compile Include="Cbm\ItemProcessWork\DeleteItemProcessWorkMasterMntCbm.cs" />
+    <Compile Include="Cbm\ItemProcessWork\GetItemProcessWorkMasterMntCbm.cs" />
+    <Compile Include="Cbm\Item\AddItemMasterMntCbm.cs" />
+    <Compile Include="Cbm\Item\CheckItemRelationCbm.cs" />
+    <Compile Include="Cbm\Item\CheckItemMasterMntCbm.cs" />
+    <Compile Include="Cbm\Item\DeleteItemMasterMntCbm.cs" />
+    <Compile Include="Cbm\Item\GetItemMasterMntCbm.cs" />
+    <Compile Include="Cbm\Item\UpdateItemMasterMntCbm.cs" />
+    <Compile Include="Cbm\InventoryReason\AddInventoryReasonMasterMntCbm.cs" />
+    <Compile Include="Cbm\InventoryReason\CheckInventoryReasonMasterMntCbm.cs" />
+    <Compile Include="Cbm\InventoryReason\DeleteInventoryReasonMasterMntCbm.cs" />
+    <Compile Include="Cbm\InventoryReason\GetInventoryReasonMasterMntCbm.cs" />
+    <Compile Include="Cbm\InventoryReason\UpdateInventoryReasonMasterMntCbm.cs" />
+    <Compile Include="Cbm\JigCauseMasterCbm\AddJigCauseCbm.cs" />
+    <Compile Include="Cbm\JigCauseMasterCbm\CheckJigCauseCbm.cs" />
+    <Compile Include="Cbm\JigCauseMasterCbm\DeleteJigCauseCbm.cs" />
+    <Compile Include="Cbm\JigCauseMasterCbm\GetJigCauseCbm.cs" />
+    <Compile Include="Cbm\JigCauseMasterCbm\UpdateJigCauseCbm.cs" />
+    <Compile Include="Cbm\JigResponseMasterCbm\AddJigResponseCbm.cs" />
+    <Compile Include="Cbm\JigResponseMasterCbm\CheckJigResponseCbm.cs" />
+    <Compile Include="Cbm\JigResponseMasterCbm\DeleteJigResponseCbm.cs" />
+    <Compile Include="Cbm\JigResponseMasterCbm\GetJigResponseCbm.cs" />
+    <Compile Include="Cbm\JigResponseMasterCbm\UpdateJigResponseCbm.cs" />
+    <Compile Include="Cbm\DefectiveCategory\AddDefectiveCategoryMasterMntCbm.cs" />
+    <Compile Include="Cbm\DefectiveCategory\CheckDefectiveCategoryMasterMntCbm.cs" />
+    <Compile Include="Cbm\DefectiveCategory\DeleteDefectiveCategoryMasterMntCbm.cs" />
+    <Compile Include="Cbm\DefectiveCategory\GetDefectiveCategoryMasterMntCbm.cs" />
+    <Compile Include="Cbm\DefectiveCategory\UpdateDefectiveCategoryMasterMntCbm.cs" />
+    <Compile Include="Cbm\LocalSupplierCavity\AddLocalSupplierCavityMasterMntCbm.cs" />
+    <Compile Include="Cbm\LocalSupplierCavity\CheckLocalSupplierCavityMasterMntCbm.cs" />
+    <Compile Include="Cbm\LocalSupplierCavity\DeleteLocalSupplierCavityMasterMntCbm.cs" />
+    <Compile Include="Cbm\LocalSupplierCavity\GetLocalSupplierCavityMasterMntCbm.cs" />
+    <Compile Include="Cbm\LocalSupplierCavity\UpdateLocalSupplierCavityMasterMntCbm.cs" />
+    <Compile Include="Cbm\LocalSupplier\CheckLocalSupplierRelationCbm.cs" />
+    <Compile Include="Cbm\LocalUser\DeleteLocalUserMasterMntCbm.cs" />
+    <Compile Include="Cbm\LocalUser\UpdateLocalUserMasterMntCbm.cs" />
+    <Compile Include="Cbm\LocalUser\GetLocalUserMasterMntCbm.cs" />
+    <Compile Include="Cbm\LocalUser\AddLocalUserMasterMntCbm.cs" />
+    <Compile Include="Cbm\Location\AddLocationMasterMntCbm.cs" />
+    <Compile Include="Cbm\Location\CheckLocationMasterMntCbm.cs" />
+    <Compile Include="Cbm\Location\DeleteLocationMasterMntCbm.cs" />
+    <Compile Include="Cbm\Location\GetLocationMasterMntCbm.cs" />
+    <Compile Include="Cbm\Location\UpdateLocationMasterMntCbm.cs" />
+    <Compile Include="Cbm\MachineAndEquipmentCbm\AddMachineEquipmentCbm.cs" />
+    <Compile Include="Cbm\MachineAndEquipmentCbm\DeleteMachineEquipmentCbm.cs" />
+    <Compile Include="Cbm\MachineAndEquipmentCbm\GetMachineEquipmentCbm.cs" />
+    <Compile Include="Cbm\ModelLineMasterCbm\AddModelLineCbm.cs" />
+    <Compile Include="Cbm\ModelLineMasterCbm\DeleteModelLineCbm.cs" />
+    <Compile Include="Cbm\ModelLineMasterCbm\GetModelLineCbm.cs" />
+    <Compile Include="Cbm\ModelMasterCbm\AddModelCbm.cs" />
+    <Compile Include="Cbm\ModelMasterCbm\CheckModelCbm.cs" />
+    <Compile Include="Cbm\ModelMasterCbm\DeleteModelCbm.cs" />
+    <Compile Include="Cbm\ModelMasterCbm\GetModelCbm.cs" />
+    <Compile Include="Cbm\ModelMasterCbm\UpdateModelCbm.cs" />
+    <Compile Include="Cbm\ModelProcessMasterCbm\AddModelProcessCbm.cs" />
+    <Compile Include="Cbm\ModelProcessMasterCbm\DeleteModelProcessCbm.cs" />
+    <Compile Include="Cbm\ModelProcessMasterCbm\GetModelProcessCbm.cs" />
+    <Compile Include="Cbm\MoldType\CheckMoldTypeRelationCbm.cs" />
+    <Compile Include="Cbm\Mold\CheckMoldRelationCbm.cs" />
+    <Compile Include="Cbm\Palette\AddPaletteMasterMntCbm.cs" />
+    <Compile Include="Cbm\Palette\CheckPaletteMasterMntCbm.cs" />
+    <Compile Include="Cbm\Palette\DeletePaletteMasterMntCbm.cs" />
+    <Compile Include="Cbm\Palette\GetPaletteMasterMntCbm.cs" />
+    <Compile Include="Cbm\Palette\UpdatePaletteMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessFlowRule\AddProcessFlowRuleMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessFlowRule\CheckProcessFlowRuleMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessFlowRule\DeleteProcessFlowRuleMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessFlowRule\GetProcessFlowRuleMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessFlowRule\UpdateProcessFlowRuleMasterMntCbm.cs" />
+    <Compile Include="Cbm\LocalSupplier\AddLocalSupplierMasterMntCbm.cs" />
+    <Compile Include="Cbm\LocalSupplier\CheckLocalSupplierMasterMntCbm.cs" />
+    <Compile Include="Cbm\LocalSupplier\DeleteLocalSupplierMasterMntCbm.cs" />
+    <Compile Include="Cbm\LocalSupplier\GetLocalSupplierMasterMntCbm.cs" />
+    <Compile Include="Cbm\LocalSupplier\UpdateLocalSupplierMasterMntCbm.cs" />
+    <Compile Include="Cbm\MasterMntCommonCbm.cs" />
+    <Compile Include="Cbm\MoldType\AddMoldTypeMasterMntCbm.cs" />
+    <Compile Include="Cbm\MoldType\CheckMoldTypeMasterMntCbm.cs" />
+    <Compile Include="Cbm\MoldType\DeleteMoldTypeMasterMntCbm.cs" />
+    <Compile Include="Cbm\MoldType\GetMoldTypeMasterMntCbm.cs" />
+    <Compile Include="Cbm\Mold\AddMoldMasterMntCbm.cs" />
+    <Compile Include="Cbm\Mold\CheckMoldMasterMntCbm.cs" />
+    <Compile Include="Cbm\Mold\DeleteMoldMasterMntCbm.cs" />
+    <Compile Include="Cbm\Mold\GetMoldMasterMntCbm.cs" />
+    <Compile Include="Cbm\Mold\UpdateMoldMasterMntCbm.cs" />
+    <Compile Include="Cbm\MoldType\UpdateMoldTypeMasterMntCbm.cs" />
+    <Compile Include="Cbm\Machine\AddMachineMasterMntCbm.cs" />
+    <Compile Include="Cbm\Machine\CheckMachineMasterMntCbm.cs" />
+    <Compile Include="Cbm\Machine\DeleteMachineMasterMntCbm.cs" />
+    <Compile Include="Cbm\Machine\GetMachineMasterMntCbm.cs" />
+    <Compile Include="Cbm\Machine\UpdateMachineMasterMntCbm.cs" />
+    <Compile Include="Cbm\Line\AddLineMasterMntCbm.cs" />
+    <Compile Include="Cbm\Line\CheckLineMasterMntCbm.cs" />
+    <Compile Include="Cbm\Line\DeleteLineMasterMntCbm.cs" />
+    <Compile Include="Cbm\Line\GetLineMasterMntCbm.cs" />
+    <Compile Include="Cbm\Line\UpdateLineMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessDefectiveReason\AddProcessDefectiveReasonMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessDefectiveReason\DeleteProcessDefectiveReasonMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessDefectiveReason\GetProcessDefectiveReasonMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessWorkLine\AddProcessWorkLineMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessWorkLine\CheckProcessWorkLineMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessWorkLine\DeleteProcessWorkLineMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessWorkLine\GetProcessWorkLineMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessWorkLocalSupplier\AddProcessWorkLocalSupplierMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessWorkLocalSupplier\DeleteProcessWorkLocalSupplierMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessWorkLocalSupplier\GetProcessWorkLocalSupplierMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessWorkMachine\AddProcessWorkMachineMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessWorkMachine\CheckProcessWorkMachineMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessWorkMachine\DeleteProcessWorkMachineMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessWorkMachine\GetProcessWorkMachineMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessWork\AddProcessWorkMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessWork\CheckProcessWorkDisplayMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessWork\CheckProcessWorkRelationCbm.cs" />
+    <Compile Include="Cbm\ProcessWork\CheckProcessWorkMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessWork\DeleteProcessWorkMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessWork\GetDisplayOrderNextValCbm.cs" />
+    <Compile Include="Cbm\ProcessWork\GetProcessWorkMasterMntCbm.cs" />
+    <Compile Include="Cbm\Process\AddProcessMasterMntCbm.cs" />
+    <Compile Include="Cbm\Process\CheckProcessRelationCbm.cs" />
+    <Compile Include="Cbm\Process\CheckProcessMasterMntCbm.cs" />
+    <Compile Include="Cbm\Process\DeleteProcessMasterMntCbm.cs" />
+    <Compile Include="Cbm\Process\GetProcessMasterMntCbm.cs" />
+    <Compile Include="Cbm\Process\UpdateProcessMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProcessWork\UpdateProcessWorkMasterMntCbm.cs" />
+    <Compile Include="Cbm\ProdutionWorkContentType\AddProdutionWorkContentTypeCbm.cs" />
+    <Compile Include="Cbm\ProdutionWorkContentType\CheckProdutionWorkContentTypeCbm.cs" />
+    <Compile Include="Cbm\ProdutionWorkContentType\DeleteProdutionWorkContentTypeCbm.cs" />
+    <Compile Include="Cbm\ProdutionWorkContentType\GetProdutionWorkContentTypeCbm.cs" />
+    <Compile Include="Cbm\ProdutionWorkContentType\UpdateProdutionWorkContentTypeCbm.cs" />
+    <Compile Include="Cbm\ProdutionWorkContent\AddProdutionWorkContentCbm.cs" />
+    <Compile Include="Cbm\ProdutionWorkContent\CheckProdutionWorkContentCbm.cs" />
+    <Compile Include="Cbm\ProdutionWorkContent\DeleteProdutionWorkContentCbm.cs" />
+    <Compile Include="Cbm\ProdutionWorkContent\GetProdutionWorkContentCbm.cs" />
+    <Compile Include="Cbm\ProdutionWorkContent\GetProdutionWorkContentNewOrderCbm.cs" />
+    <Compile Include="Cbm\ProdutionWorkContent\UpdateProdutionWorkContentCbm.cs" />
+    <Compile Include="Cbm\ResponseMachineCbm\AddResponseMachineCbm.cs" />
+    <Compile Include="Cbm\ResponseMachineCbm\DeleteResponseMachineCbm.cs" />
+    <Compile Include="Cbm\ResponseMachineCbm\GetResponseMachineCbm.cs" />
+    <Compile Include="Cbm\RoleAuthorityControl\GetRoleAuthorityControlMasterMntCbm.cs" />
+    <Compile Include="Cbm\RoleAuthorityControl\AddRoleAuthorityControlMasterMntCbm.cs" />
+    <Compile Include="Cbm\RoleAuthorityControl\DeleteRoleAuthorityControlMasterMntCbm.cs" />
+    <Compile Include="Cbm\Roles\CheckRoleRelationCbm.cs" />
+    <Compile Include="Cbm\Roles\GetRoleMasterMntCbm.cs" />
+    <Compile Include="Cbm\Roles\AddRoleMasterMntCbm.cs" />
+    <Compile Include="Cbm\Roles\UpdateRoleMasterMntCbm.cs" />
+    <Compile Include="Cbm\Roles\CheckRoleMasterMntCbm.cs" />
+    <Compile Include="Cbm\Roles\DeleteRoleMasterMntCbm.cs" />
+    <Compile Include="Cbm\SapUser\AddSapUserMasterMntCbm.cs" />
+    <Compile Include="Cbm\SapUser\DeleteSapUserMasterMntCbm.cs" />
+    <Compile Include="Cbm\SapUser\GetSapUserMasterMntCbm.cs" />
+    <Compile Include="Cbm\SapUser\GetSapUsersMasterMntCbm.cs" />
+    <Compile Include="Cbm\SapUser\UpdateSapUserMasterMntCbm.cs" />
+    <Compile Include="Cbm\Shelf\AddShelfMasterMntCbm.cs" />
+    <Compile Include="Cbm\Shelf\CheckShelfMasterMntCbm.cs" />
+    <Compile Include="Cbm\Shelf\DeleteShelfMasterMntCbm.cs" />
+    <Compile Include="Cbm\Shelf\GetShelfMasterMntCbm.cs" />
+    <Compile Include="Cbm\Shelf\UpdateShelfMasterMntCbm.cs" />
+    <Compile Include="Cbm\UserFactory\UpdateUserFactoryMasterMntCbm.cs" />
+    <Compile Include="Cbm\UserFactory\GetUserFactoryMasterMntCbm.cs" />
+    <Compile Include="Cbm\UserFactory\AddUserFactoryMasterMntCbm.cs" />
+    <Compile Include="Cbm\UserFactory\DeleteUserFactoryMasterMntCbm.cs" />
+    <Compile Include="Cbm\UserRole\GetUserRoleMasterMntCbm.cs" />
+    <Compile Include="Cbm\UserRole\AddUserRoleMasterMntCbm.cs" />
+    <Compile Include="Cbm\Users\AddUserMasterMntCbm.cs" />
+    <Compile Include="Cbm\Users\CheckUserRelationCbm.cs" />
+    <Compile Include="Cbm\Users\DeleteUserMasterMntCbm.cs" />
+    <Compile Include="Cbm\Users\GetUserMasterMntCbm.cs" />
+    <Compile Include="Cbm\Users\CheckUserMasterMntCbm.cs" />
+    <Compile Include="Cbm\Users\UpdateUserMasterMntCbm.cs" />
+    <Compile Include="Cbm\UserRole\DeleteUserRoleMasterMntCbm.cs" />
+    <Compile Include="Cbm\WarehouseArea\AddAreaMasterMntCbm.cs" />
+    <Compile Include="Cbm\WarehouseArea\CheckAreaMasterMntCbm.cs" />
+    <Compile Include="Cbm\WarehouseArea\DeleteAreaMasterMntCbm.cs" />
+    <Compile Include="Cbm\WarehouseArea\GetAreaMasterMntCbm.cs" />
+    <Compile Include="Cbm\WarehouseArea\UpdateAreaMasterMntCbm.cs" />
+    <Compile Include="CommonConstants.cs" />
+    <Compile Include="Dao\AuthorityControl\AddAuthorityControlMasterMntDao.cs" />
+    <Compile Include="Dao\AuthorityControl\CheckAuthorityControlRelationDao.cs" />
+    <Compile Include="Dao\AuthorityControl\CheckAuthorityControlMasterMntDao.cs" />
+    <Compile Include="Dao\AuthorityControl\DeleteAuthorityControlMasterMntDao.cs" />
+    <Compile Include="Dao\AuthorityControl\GetAuthorityControlMasterMntDao.cs" />
+    <Compile Include="Dao\AuthorityControl\UpdateAuthorityControlMasterMntDao.cs" />
+    <Compile Include="Dao\Building\AddBuildingMasterMntDao.cs" />
+    <Compile Include="Dao\Building\CheckBuildingRelationDao.cs" />
+    <Compile Include="Dao\Building\CheckBuildingMasterMntDao.cs" />
+    <Compile Include="Dao\Building\DeleteBuildingMasterMntDao.cs" />
+    <Compile Include="Dao\Building\GetBuildingMasterMntDao.cs" />
+    <Compile Include="Dao\Building\UpdateBuildingMasterMntDao.cs" />
+    <Compile Include="Dao\CastingMachineFurnace\AddCastingMachineFurnaceMasterMntDao.cs" />
+    <Compile Include="Dao\CastingMachineFurnace\CheckCastingMachineFurnaceMasterMntDao.cs" />
+    <Compile Include="Dao\CastingMachineFurnace\CheckCastingMachineFurnaceRelationDao.cs" />
+    <Compile Include="Dao\CastingMachineFurnace\DeleteCastingMachineFurnaceMasterMntDao.cs" />
+    <Compile Include="Dao\CastingMachineFurnace\GetCastingMachineFurnaceMasterMntDao.cs" />
+    <Compile Include="Dao\CastingMachineFurnace\UpdateCastingMachineFurnaceMasterMntDao.cs" />
+    <Compile Include="Dao\CastingMachine\AddCastingMachineMasterMntDao.cs" />
+    <Compile Include="Dao\CastingMachine\CheckCastingMachineMasterMntDao.cs" />
+    <Compile Include="Dao\CastingMachine\DeleteCastingMachineMasterMntDao.cs" />
+    <Compile Include="Dao\CastingMachine\GetCastingMachineMasterMntDao.cs" />
+    <Compile Include="Dao\CastingMachine\UpdateCastingMachineMasterMntDao.cs" />
+    <Compile Include="Dao\CauseMasterDao\AddCauseDao.cs" />
+    <Compile Include="Dao\CauseMasterDao\DeleteCauseDao.cs" />
+    <Compile Include="Dao\CauseMasterDao\GetCauseDao.cs" />
+    <Compile Include="Dao\Cavity\AddCavityMasterMntDao.cs" />
+    <Compile Include="Dao\Cavity\CheckCavityMasterMntDao.cs" />
+    <Compile Include="Dao\Cavity\DeleteCavityMasterMntDao.cs" />
+    <Compile Include="Dao\Cavity\GetCavityMasterMntDao.cs" />
+    <Compile Include="Dao\Cavity\GetCavityMasterMntWithModelDao.cs" />
+    <Compile Include="Dao\Cavity\UpdateCavityMasterMntDao.cs" />
+    <Compile Include="Dao\CountryLanguage\AddCountryLanguageMasterMntDao.cs" />
+    <Compile Include="Dao\CountryLanguage\CheckCountryLanguageCheckRelationDao.cs" />
+    <Compile Include="Dao\CountryLanguage\CheckCountryLanguageMasterMntDao.cs" />
+    <Compile Include="Dao\CountryLanguage\DeleteCountryLanguageMasterMntDao.cs" />
+    <Compile Include="Dao\CountryLanguage\GetCountryLanguageMasterMntDao.cs" />
+    <Compile Include="Dao\CountryLanguage\UpdateCountryLanguageMasterMntDao.cs" />
+    <Compile Include="Dao\Customer\AddCustomerMasterMntDao.cs" />
+    <Compile Include="Dao\Customer\CheckCustomerMasterMntDao.cs" />
+    <Compile Include="Dao\Customer\DeleteCustomerMasterMntDao.cs" />
+    <Compile Include="Dao\Customer\GetCustomerMasterMntDao.cs" />
+    <Compile Include="Dao\Customer\UpdateCustomerMasterMntDao.cs" />
+    <Compile Include="Dao\DefectiveCategory\CheckDefectiveCategoryMasterMntDao.cs" />
+    <Compile Include="Dao\DefectiveReason\AddDefectiveReasonMasterMntDao.cs" />
+    <Compile Include="Dao\DefectiveReason\CheckDisplayRecordMasterMntDao.cs" />
+    <Compile Include="Dao\DefectiveReason\CheckDefectiveReasonMasterMntDao.cs" />
+    <Compile Include="Dao\DefectiveReason\CheckDefectiveReasonRelationDao.cs" />
+    <Compile Include="Dao\DefectiveReason\DeleteDefectiveReasonMasterMntDao.cs" />
+    <Compile Include="Dao\DefectiveReason\GetDefectiveReasonMasterMntDao.cs" />
+    <Compile Include="Dao\DefectiveReason\UpdateDefectiveReasonMasterMntDao.cs" />
+    <Compile Include="Dao\DrawMasterDao\AddDrawDao.cs" />
+    <Compile Include="Dao\DrawMasterDao\CheckDrawDao.cs" />
+    <Compile Include="Dao\DrawMasterDao\DeleteDrawDao.cs" />
+    <Compile Include="Dao\DrawMasterDao\GetDrawDao.cs" />
+    <Compile Include="Dao\DrawMasterDao\UpdateDrawDao.cs" />
+    <Compile Include="Dao\Employee\AddEmployeeMasterMntDao.cs" />
+    <Compile Include="Dao\Employee\CheckEmployeeMasterMntDao.cs" />
+    <Compile Include="Dao\Employee\DeleteEmployeeMasterMntDao.cs" />
+    <Compile Include="Dao\Employee\GetEmployeeMasterMntDao.cs" />
+    <Compile Include="Dao\Employee\UpdateEmployeeMasterMntDao.cs" />
+    <Compile Include="Dao\Equipment\AddEquipmentMasterMntDao.cs" />
+    <Compile Include="Dao\Equipment\CheckEquipmentMasterMntDao.cs" />
+    <Compile Include="Dao\Equipment\CheckEquipmentRelationDao.cs" />
+    <Compile Include="Dao\Equipment\DeleteEquipmentMasterMntDao.cs" />
+    <Compile Include="Dao\Equipment\GetEquipmentMasterMntDao.cs" />
+    <Compile Include="Dao\Equipment\UpdateEquipmentMasterMntDao.cs" />
+    <Compile Include="Dao\Factory\AddFactoryMasterMntDao.cs" />
+    <Compile Include="Dao\Factory\CheckFactoryRelationDao.cs" />
+    <Compile Include="Dao\Factory\CheckFactoryMasterMntDao.cs" />
+    <Compile Include="Dao\Factory\DeleteFactoryMasterMntDao.cs" />
+    <Compile Include="Dao\Factory\GetFactoryMasterMntDao.cs" />
+    <Compile Include="Dao\Factory\UpdateFactoryMasterMntDao.cs" />
+    <Compile Include="Dao\GroupMachine\AddGroupMachineDao.cs" />
+    <Compile Include="Dao\GroupMachine\CheckGroupMachineDao.cs" />
+    <Compile Include="Dao\GroupMachine\DeleteGroupMachineDao.cs" />
+    <Compile Include="Dao\GroupMachine\GetGroupMachineNameDao.cs" />
+    <Compile Include="Dao\GroupMachine\GetGroupMachineDao.cs" />
+    <Compile Include="Dao\GroupMachine\UpdateGroupMachineDao.cs" />
+    <Compile Include="Dao\ItemProcessWork\AddItemProcessWorkMasterMntDao.cs" />
+    <Compile Include="Dao\ItemProcessWork\DeleteItemProcessWorkMasterMntDao.cs" />
+    <Compile Include="Dao\ItemProcessWork\GetItemProcessWorkMasterMntDao.cs" />
+    <Compile Include="Dao\Item\AddItemMasterMntDao.cs" />
+    <Compile Include="Dao\Item\CheckItemRelationDao.cs" />
+    <Compile Include="Dao\Item\CheckItemMasterMntDao.cs" />
+    <Compile Include="Dao\Item\DeleteItemMasterMntDao.cs" />
+    <Compile Include="Dao\Item\GetItemMasterMntDao.cs" />
+    <Compile Include="Dao\Item\UpdateItemMasterMntDao.cs" />
+    <Compile Include="Dao\InventoryReason\AddInventoryReasonMasterMntDao.cs" />
+    <Compile Include="Dao\InventoryReason\CheckInventoryReasonMasterMntDao.cs" />
+    <Compile Include="Dao\InventoryReason\DeleteInventoryReasonMasterMntDao.cs" />
+    <Compile Include="Dao\InventoryReason\GetInventoryReasonMasterMntDao.cs" />
+    <Compile Include="Dao\InventoryReason\UpdateInventoryReasonMasterMntDao.cs" />
+    <Compile Include="Dao\JigCauseMasterDao\AddJigCauseDao.cs" />
+    <Compile Include="Dao\JigCauseMasterDao\CheckJigCauseDao.cs" />
+    <Compile Include="Dao\JigCauseMasterDao\DeleteJigCauseDao.cs" />
+    <Compile Include="Dao\JigCauseMasterDao\GetJigCauseDao.cs" />
+    <Compile Include="Dao\JigCauseMasterDao\UpdateJigCauseDao.cs" />
+    <Compile Include="Dao\JigResponseMasterDao\AddJigResponseDao.cs" />
+    <Compile Include="Dao\JigResponseMasterDao\CheckJigResponseDao.cs" />
+    <Compile Include="Dao\JigResponseMasterDao\DeleteJigResponseDao.cs" />
+    <Compile Include="Dao\JigResponseMasterDao\GetJigResponseDao.cs" />
+    <Compile Include="Dao\JigResponseMasterDao\UpdateJigResponseDao.cs" />
+    <Compile Include="Dao\DefectiveCategory\AddDefectiveCategoryMasterMntDao.cs" />
+    <Compile Include="Dao\DefectiveCategory\DeleteDefectiveCategoryMasterMntDao.cs" />
+    <Compile Include="Dao\DefectiveCategory\GetDefectiveCategoryMasterMntDao.cs" />
+    <Compile Include="Dao\DefectiveCategory\UpdateDefectiveCategoryMasterMntDao.cs" />
+    <Compile Include="Dao\LocalSupplierCavity\AddLocalSupplierCavityMasterMntDao.cs" />
+    <Compile Include="Dao\LocalSupplierCavity\CheckLocalSupplierCavityMasterMntDao.cs" />
+    <Compile Include="Dao\LocalSupplierCavity\DeleteLocalSupplierCavityMasterMntDao.cs" />
+    <Compile Include="Dao\LocalSupplierCavity\GetLocalSupplierCavityMasterMntDao.cs" />
+    <Compile Include="Dao\LocalSupplierCavity\UpdateLocalSupplierCavityMasterMntDao.cs" />
+    <Compile Include="Dao\LocalSupplier\CheckLocalSupplierRelationDao.cs" />
+    <Compile Include="Dao\Location\AddLocationMasterMntDao.cs" />
+    <Compile Include="Dao\Location\CheckLocationMasterMntDao.cs" />
+    <Compile Include="Dao\Location\DeleteLocationMasterMntDao.cs" />
+    <Compile Include="Dao\Location\GetLocationMasterMntDao.cs" />
+    <Compile Include="Dao\Location\UpdateLocationMasterMntDao.cs" />
+    <Compile Include="Dao\LoginPassword\AddLoginPasswordMasterMntDao.cs" />
+    <Compile Include="Dao\LoginPassword\DeleteLoginPasswordMasterMntDao.cs" />
+    <Compile Include="Dao\LoginPassword\GetLoginPasswordMasterMntDao.cs" />
+    <Compile Include="Dao\LoginPassword\UpdateLoginPasswordMasterMntDao.cs" />
+    <Compile Include="Dao\MachineAndEquipmentDao\AddMachineEquipmentDao.cs" />
+    <Compile Include="Dao\MachineAndEquipmentDao\DeleteMachineEquipmentDao.cs" />
+    <Compile Include="Dao\MachineAndEquipmentDao\GetMachineEquipmentDao.cs" />
+    <Compile Include="Dao\ModelLineMasterDao\AddModelLineDao.cs" />
+    <Compile Include="Dao\ModelLineMasterDao\DeleteModelLineDao.cs" />
+    <Compile Include="Dao\ModelLineMasterDao\GetModelLineDao.cs" />
+    <Compile Include="Dao\ModelMasterDao\AddModelDao.cs" />
+    <Compile Include="Dao\ModelMasterDao\CheckModelDao.cs" />
+    <Compile Include="Dao\ModelMasterDao\DeleteModelDao.cs" />
+    <Compile Include="Dao\ModelMasterDao\GetModelDao.cs" />
+    <Compile Include="Dao\ModelMasterDao\UpdateModelDao.cs" />
+    <Compile Include="Dao\ModelProcessMasterDao\AddModelProcessDao.cs" />
+    <Compile Include="Dao\ModelProcessMasterDao\DeleteModelProcessDao.cs" />
+    <Compile Include="Dao\ModelProcessMasterDao\GetModelProcessDao.cs" />
+    <Compile Include="Dao\MoldType\CheckMoldTypeRelationDao.cs" />
+    <Compile Include="Dao\Mold\CheckMoldRelationDao.cs" />
+    <Compile Include="Dao\Palette\AddPaletteMasterMntDao.cs" />
+    <Compile Include="Dao\Palette\CheckPaletteMasterMntDao.cs" />
+    <Compile Include="Dao\Palette\DeletePaletteMasterMntDao.cs" />
+    <Compile Include="Dao\Palette\GetPaletteMasterMntDao.cs" />
+    <Compile Include="Dao\Palette\UpdatePaletteMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessFlowRule\AddProcessFlowRuleMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessFlowRule\CheckProcessFlowRuleMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessFlowRule\DeleteProcessFlowRuleMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessFlowRule\GetProcessFlowRuleMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessFlowRule\UpdateProcessFlowRuleMasterMntDao.cs" />
+    <Compile Include="Dao\LocalSupplier\AddLocalSupplierMasterMntDao.cs" />
+    <Compile Include="Dao\LocalSupplier\CheckLocalSupplierMasterMntDao.cs" />
+    <Compile Include="Dao\LocalSupplier\DeleteLocalSupplierMasterMntDao.cs" />
+    <Compile Include="Dao\LocalSupplier\GetLocalSupplierMasterMntDao.cs" />
+    <Compile Include="Dao\LocalSupplier\UpdateLocalSupplierMasterMntDao.cs" />
+    <Compile Include="Dao\MoldType\AddMoldTypeMasterMntDao.cs" />
+    <Compile Include="Dao\MoldType\CheckMoldTypeMasterMntDao.cs" />
+    <Compile Include="Dao\MoldType\DeleteMoldTypeMasterMntDao.cs" />
+    <Compile Include="Dao\MoldType\GetMoldTypeMasterMntDao.cs" />
+    <Compile Include="Dao\MoldType\UpdateMoldTypeMasterMntDao.cs" />
+    <Compile Include="Dao\Mold\AddMoldMasterMntDao.cs" />
+    <Compile Include="Dao\Mold\CheckMoldMasterMntDao.cs" />
+    <Compile Include="Dao\Mold\DeleteMoldMasterMntDao.cs" />
+    <Compile Include="Dao\Mold\GetMoldMasterMntDao.cs" />
+    <Compile Include="Dao\Mold\UpdateMoldMasterMntDao.cs" />
+    <Compile Include="Dao\Machine\AddMachineMasterMntDao.cs" />
+    <Compile Include="Dao\Machine\CheckMachineMasterMntDao.cs" />
+    <Compile Include="Dao\Machine\DeleteMachineMasterMntDao.cs" />
+    <Compile Include="Dao\Machine\GetMachineMasterMntDao.cs" />
+    <Compile Include="Dao\Machine\UpdateMachineMasterMntDao.cs" />
+    <Compile Include="Dao\Line\AddLineMasterMntDao.cs" />
+    <Compile Include="Dao\Line\CheckLineMasterMntDao.cs" />
+    <Compile Include="Dao\Line\DeleteLineMasterMntDao.cs" />
+    <Compile Include="Dao\Line\GetLineMasterMntDao.cs" />
+    <Compile Include="Dao\Line\UpdateLineMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessDefectiveReason\AddProcessDefectiveReasonMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessDefectiveReason\DeleteProcessDefectiveReasonMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessDefectiveReason\GetProcessDefectiveReasonMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessWorkLine\AddProcessWorkLineMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessWorkLine\CheckProcessWorkLineMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessWorkLine\DeleteProcessWorkLineMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessWorkLine\GetProcessWorkLineMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessWorkLocalSupplier\AddProcessWorkLocalSupplierMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessWorkLocalSupplier\DeleteProcessWorkLocalSupplierMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessWorkLocalSupplier\GetProcessWorkLocalSupplierMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessWorkMachine\AddProcessWorkMachineMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessWorkMachine\CheckProcessWorkMachineMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessWorkMachine\DeleteProcessWorkMachineMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessWorkMachine\GetProcessWorkMachineMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessWork\AddProcessWorkMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessWork\CheckProcessWorkDisplayMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessWork\CheckProcessWorkRelationDao.cs" />
+    <Compile Include="Dao\ProcessWork\CheckProcessWorkMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessWork\DeleteProcessWorkMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessWork\GetDisplayOrderNextValDao.cs" />
+    <Compile Include="Dao\ProcessWork\GetProcessWorkMasterMntDao.cs" />
+    <Compile Include="Dao\ProcessWork\UpdateProcessWorkMasterMntDao.cs" />
+    <Compile Include="Dao\Process\AddProcessMasterMntDao.cs" />
+    <Compile Include="Dao\Process\CheckProcessRelationDao.cs" />
+    <Compile Include="Dao\Process\CheckProcessMasterMntDao.cs" />
+    <Compile Include="Dao\Process\DeleteProcessMasterMntDao.cs" />
+    <Compile Include="Dao\Process\GetProcessMasterMntDao.cs" />
+    <Compile Include="Dao\Process\UpdateProcessMasterMntDao.cs" />
+    <Compile Include="Dao\ProdutionWorkContentType\AddProdutionWorkContentTypeDao.cs" />
+    <Compile Include="Dao\ProdutionWorkContentType\CheckProdutionWorkContentTypeDao.cs" />
+    <Compile Include="Dao\ProdutionWorkContentType\DeleteProdutionWorkContentTypeDao.cs" />
+    <Compile Include="Dao\ProdutionWorkContentType\GetProdutionWorkContentTypeDao.cs" />
+    <Compile Include="Dao\ProdutionWorkContentType\UpdateProdutionWorkContentTypeDao.cs" />
+    <Compile Include="Dao\ProdutionWorkContent\AddProdutionWorkContentDao.cs" />
+    <Compile Include="Dao\ProdutionWorkContent\CheckProdutionWorkContentDao.cs" />
+    <Compile Include="Dao\ProdutionWorkContent\DeleteProdutionWorkContentDao.cs" />
+    <Compile Include="Dao\ProdutionWorkContent\GetProdutionWorkContentDao.cs" />
+    <Compile Include="Dao\ProdutionWorkContent\GetProdutionWorkContentNewOrderDao.cs" />
+    <Compile Include="Dao\ProdutionWorkContent\UpdateProdutionWorkContentDao.cs" />
+    <Compile Include="Dao\ResponseMachineDao\AddResponseMachineDao.cs" />
+    <Compile Include="Dao\ResponseMachineDao\DeleteResponseMachineDao.cs" />
+    <Compile Include="Dao\ResponseMachineDao\GetResponseMachineDao.cs" />
+    <Compile Include="Dao\RoleAuthorityControl\AddRoleAuthorityControlMasterMntDao.cs" />
+    <Compile Include="Dao\RoleAuthorityControl\DeleteRoleAuthorityControlMasterMntDao.cs" />
+    <Compile Include="Dao\RoleAuthorityControl\GetRoleAuthorityControlMasterMntDao.cs" />
+    <Compile Include="Dao\Roles\AddRoleMasterMntDao.cs" />
+    <Compile Include="Dao\Roles\CheckRoleRelationDao.cs" />
+    <Compile Include="Dao\Roles\CheckRoleMasterMntDao.cs" />
+    <Compile Include="Dao\Roles\DeleteRoleMasterMntDao.cs" />
+    <Compile Include="Dao\Roles\GetRoleMasterMntDao.cs" />
+    <Compile Include="Dao\Roles\UpdateRoleMasterMntDao.cs" />
+    <Compile Include="Dao\SapUser\AddSapUserMasterMntDao.cs" />
+    <Compile Include="Dao\SapUser\DeleteSapUserMasterMntDao.cs" />
+    <Compile Include="Dao\SapUser\GetSapUserDao.cs" />
+    <Compile Include="Dao\SapUser\GetSapUserMasterMntDao.cs" />
+    <Compile Include="Dao\SapUser\GetSapUsersMasterMntDao.cs" />
+    <Compile Include="Dao\SapUser\UpdateSapUserMasterMntDao.cs" />
+    <Compile Include="Dao\Shelf\AddShelfMasterMntDao.cs" />
+    <Compile Include="Dao\Shelf\CheckShelfMasterMntDao.cs" />
+    <Compile Include="Dao\Shelf\DeleteShelfMasterMntDao.cs" />
+    <Compile Include="Dao\Shelf\GetShelfMasterMntDao.cs" />
+    <Compile Include="Dao\Shelf\UpdateShelfMasterMntDao.cs" />
+    <Compile Include="Dao\UserFactory\AddUserFactoryMasterMntDao.cs" />
+    <Compile Include="Dao\UserFactory\DeleteUserFactoryMasterMntDao.cs" />
+    <Compile Include="Dao\UserFactory\GetUserFactoryMasterMntDao.cs" />
+    <Compile Include="Dao\UserRole\AddUserRoleMasterMntDao.cs" />
+    <Compile Include="Dao\UserRole\DeleteUserRoleMasterMntDao.cs" />
+    <Compile Include="Dao\UserRole\GetUserRoleMasterMntDao.cs" />
+    <Compile Include="Dao\Users\AddUserMasterMntDao.cs" />
+    <Compile Include="Dao\Users\CheckUserRelationDao.cs" />
+    <Compile Include="Dao\Users\CheckUserMasterMntDao.cs" />
+    <Compile Include="Dao\Users\DeleteUserMasterMntDao.cs" />
+    <Compile Include="Dao\Users\GetUserMasterMntDao.cs" />
+    <Compile Include="Dao\Users\UpdateUserMasterMntDao.cs" />
+    <Compile Include="Dao\WarehouseArea\AddAreaMasterMntDao.cs" />
+    <Compile Include="Dao\WarehouseArea\CheckAreaMasterMntDao.cs" />
+    <Compile Include="Dao\WarehouseArea\DeleteAreaMasterMntDao.cs" />
+    <Compile Include="Dao\WarehouseArea\GetAreaMasterMntDao.cs" />
+    <Compile Include="Dao\WarehouseArea\UpdateAreaMasterMntDao.cs" />
+    <Compile Include="Form\AuthorityControl\AddAuthorityControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AuthorityControl\AddAuthorityControlForm.Designer.cs">
+      <DependentUpon>AddAuthorityControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\AuthorityControl\AuthorityControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AuthorityControl\AuthorityControlForm.Designer.cs">
+      <DependentUpon>AuthorityControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Building\AddBuildingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Building\AddBuildingForm.designer.cs">
+      <DependentUpon>AddBuildingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Building\BuildingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Building\BuildingForm.designer.cs">
+      <DependentUpon>BuildingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CastingMachineFurnace\AddCastingMachineFurnaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CastingMachineFurnace\AddCastingMachineFurnaceForm.designer.cs">
+      <DependentUpon>AddCastingMachineFurnaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CastingMachineFurnace\CastingMachineFurnaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CastingMachineFurnace\CastingMachineFurnaceForm.designer.cs">
+      <DependentUpon>CastingMachineFurnaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CastingMachine\AddCastingMachineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CastingMachine\AddCastingMachineForm.Designer.cs">
+      <DependentUpon>AddCastingMachineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CastingMachine\CastingMachineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CastingMachine\CastingMachineForm.Designer.cs">
+      <DependentUpon>CastingMachineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CauseMaster\CauseMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CauseMaster\CauseMasterForm.Designer.cs">
+      <DependentUpon>CauseMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Cavity\AddCavityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Cavity\AddCavityForm.Designer.cs">
+      <DependentUpon>AddCavityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Cavity\CavityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Cavity\CavityForm.Designer.cs">
+      <DependentUpon>CavityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CountryLanguage\AddCountryLanguageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CountryLanguage\AddCountryLanguageForm.Designer.cs">
+      <DependentUpon>AddCountryLanguageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CountryLanguage\CountryLanguageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CountryLanguage\CountryLanguageForm.Designer.cs">
+      <DependentUpon>CountryLanguageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Customer\AddCustomerMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Customer\AddCustomerMasterForm.Designer.cs">
+      <DependentUpon>AddCustomerMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Customer\CustomerMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Customer\CustomerMasterForm.Designer.cs">
+      <DependentUpon>CustomerMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DefectiveReason\AddDefectiveReasonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DefectiveReason\AddDefectiveReasonForm.Designer.cs">
+      <DependentUpon>AddDefectiveReasonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DefectiveReason\DefectiveReasonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DefectiveReason\DefectiveReasonForm.Designer.cs">
+      <DependentUpon>DefectiveReasonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DrawMaster\AddDrawMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DrawMaster\AddDrawMasterForm.Designer.cs">
+      <DependentUpon>AddDrawMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DrawMaster\DrawMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DrawMaster\DrawMasterForm.Designer.cs">
+      <DependentUpon>DrawMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Equipment\AddEquipmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Equipment\AddEquipmentForm.Designer.cs">
+      <DependentUpon>AddEquipmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Equipment\EquipmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Equipment\EquipmentForm.Designer.cs">
+      <DependentUpon>EquipmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormCommonNCVP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormCommonNCVP.Designer.cs">
+      <DependentUpon>FormCommonNCVP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\GroupMachine\AddGroupMachineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\GroupMachine\AddGroupMachineForm.Designer.cs">
+      <DependentUpon>AddGroupMachineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\GroupMachine\GroupMachineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\GroupMachine\GroupMachineForm.Designer.cs">
+      <DependentUpon>GroupMachineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ItemProcessWork\ItemProcessWorkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ItemProcessWork\ItemProcessWorkForm.designer.cs">
+      <DependentUpon>ItemProcessWorkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\InventoryReason\AddInventoryReasonMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\InventoryReason\AddInventoryReasonMasterForm.designer.cs">
+      <DependentUpon>AddInventoryReasonMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\InventoryReason\InventoryReasonMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\InventoryReason\InventoryReasonMasterForm.designer.cs">
+      <DependentUpon>InventoryReasonMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\JigCauseMaster\AddJigCauseMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\JigCauseMaster\AddJigCauseMasterForm.Designer.cs">
+      <DependentUpon>AddJigCauseMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\JigCauseMaster\JigCauseMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\JigCauseMaster\JigCauseMasterForm.Designer.cs">
+      <DependentUpon>JigCauseMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\JigResponseMaster\AddJigResponseMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\JigResponseMaster\AddJigResponseMasterForm.Designer.cs">
+      <DependentUpon>AddJigResponseMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\JigResponseMaster\JigResponseMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\JigResponseMaster\JigResponseMasterForm.Designer.cs">
+      <DependentUpon>JigResponseMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Employee\AddEmployeeMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Employee\AddEmployeeMasterForm.designer.cs">
+      <DependentUpon>AddEmployeeMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Employee\EmployeeMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Employee\EmployeeMasterForm.designer.cs">
+      <DependentUpon>EmployeeMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DefectiveCategory\AddDefectiveCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DefectiveCategory\AddDefectiveCategoryForm.designer.cs">
+      <DependentUpon>AddDefectiveCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DefectiveCategory\DefectiveCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DefectiveCategory\DefectiveCategoryForm.designer.cs">
+      <DependentUpon>DefectiveCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Line\AddLineMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Line\AddLineMasterForm.designer.cs">
+      <DependentUpon>AddLineMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Line\LineMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Line\LineMasterForm.designer.cs">
+      <DependentUpon>LineMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Factory\AddFactoryMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Factory\AddFactoryMasterForm.designer.cs">
+      <DependentUpon>AddFactoryMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Factory\FactoryMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Factory\FactoryMasterForm.designer.cs">
+      <DependentUpon>FactoryMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormCommonMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormCommonMaster.Designer.cs">
+      <DependentUpon>FormCommonMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Item\AddItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Item\AddItemForm.Designer.cs">
+      <DependentUpon>AddItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Item\ItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Item\ItemForm.Designer.cs">
+      <DependentUpon>ItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LocalSupplierCavity\AddLocalSupplierCavityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LocalSupplierCavity\AddLocalSupplierCavityForm.Designer.cs">
+      <DependentUpon>AddLocalSupplierCavityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LocalSupplierCavity\LocalSupplierCavityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LocalSupplierCavity\LocalSupplierCavityForm.Designer.cs">
+      <DependentUpon>LocalSupplierCavityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Location\AddLocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Location\AddLocationForm.Designer.cs">
+      <DependentUpon>AddLocationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Location\LocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Location\LocationForm.Designer.cs">
+      <DependentUpon>LocationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MachineAndEquipmentMaster\MachineAndEquipmentMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MachineAndEquipmentMaster\MachineAndEquipmentMaster.Designer.cs">
+      <DependentUpon>MachineAndEquipmentMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ModelLineMater\ModelLineMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ModelLineMater\ModelLineMasterForm.Designer.cs">
+      <DependentUpon>ModelLineMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ModelMaster\AddModelMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ModelMaster\AddModelMasterForm.Designer.cs">
+      <DependentUpon>AddModelMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ModelMaster\ModelMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ModelMaster\ModelMasterForm.Designer.cs">
+      <DependentUpon>ModelMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ModelProcessMaster\ModelProcessMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ModelProcessMaster\ModelProcessMasterForm.Designer.cs">
+      <DependentUpon>ModelProcessMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Palette\AddPaletteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Palette\AddPaletteForm.Designer.cs">
+      <DependentUpon>AddPaletteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Palette\PaletteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Palette\PaletteForm.Designer.cs">
+      <DependentUpon>PaletteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProcessFlowRule\AddProcessFlowRuleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProcessFlowRule\AddProcessFlowRuleForm.Designer.cs">
+      <DependentUpon>AddProcessFlowRuleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProcessFlowRule\ProcessFlowRuleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProcessFlowRule\ProcessFlowRuleForm.Designer.cs">
+      <DependentUpon>ProcessFlowRuleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LocalSupplier\AddLocalSupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LocalSupplier\AddLocalSupplierForm.Designer.cs">
+      <DependentUpon>AddLocalSupplierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LocalSupplier\LocalSupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LocalSupplier\LocalSupplierForm.Designer.cs">
+      <DependentUpon>LocalSupplierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MoldType\AddMoldTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MoldType\AddMoldTypeForm.Designer.cs">
+      <DependentUpon>AddMoldTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MoldType\MoldTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MoldType\MoldTypeForm.Designer.cs">
+      <DependentUpon>MoldTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Mold\AddMoldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Mold\AddMoldForm.Designer.cs">
+      <DependentUpon>AddMoldForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Mold\MoldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Mold\MoldForm.Designer.cs">
+      <DependentUpon>MoldForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Machine\AddMachineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Machine\AddMachineForm.Designer.cs">
+      <DependentUpon>AddMachineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Machine\MachineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Machine\MachineForm.Designer.cs">
+      <DependentUpon>MachineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProcessDefectiveReason\ProcessDefectiveReasonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProcessDefectiveReason\ProcessDefectiveReasonForm.designer.cs">
+      <DependentUpon>ProcessDefectiveReasonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProcessWorkLine\ProcessWorkLineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProcessWorkLine\ProcessWorkLineForm.Designer.cs">
+      <DependentUpon>ProcessWorkLineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProcessWorkLocalSupplier\ProcessWorkLocalSupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProcessWorkLocalSupplier\ProcessWorkLocalSupplierForm.Designer.cs">
+      <DependentUpon>ProcessWorkLocalSupplierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProcessWorkMachine\ProcessWorkMachineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProcessWorkMachine\ProcessWorkMachineForm.Designer.cs">
+      <DependentUpon>ProcessWorkMachineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProcessWork\AddProcessWorkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProcessWork\AddProcessWorkForm.Designer.cs">
+      <DependentUpon>AddProcessWorkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProcessWork\ProcessWorkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProcessWork\ProcessWorkForm.Designer.cs">
+      <DependentUpon>ProcessWorkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Process\AddProcessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Process\AddProcessForm.Designer.cs">
+      <DependentUpon>AddProcessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Process\ProcessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Process\ProcessForm.Designer.cs">
+      <DependentUpon>ProcessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProdutionWorkContentType\AddProdutionWorkContentTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProdutionWorkContentType\AddProdutionWorkContentTypeForm.Designer.cs">
+      <DependentUpon>AddProdutionWorkContentTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProdutionWorkContentType\ProdutionWorkContentTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProdutionWorkContentType\ProdutionWorkContentTypeForm.Designer.cs">
+      <DependentUpon>ProdutionWorkContentTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProdutionWorkContent\AddProdutionWorkContentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProdutionWorkContent\AddProdutionWorkContentForm.Designer.cs">
+      <DependentUpon>AddProdutionWorkContentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProdutionWorkContent\ProdutionWorkContentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProdutionWorkContent\ProdutionWorkContentForm.Designer.cs">
+      <DependentUpon>ProdutionWorkContentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ResponseMachine\ResponseMachineMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ResponseMachine\ResponseMachineMasterForm.Designer.cs">
+      <DependentUpon>ResponseMachineMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\RoleAuthorityControl\RoleAuthorityControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\RoleAuthorityControl\RoleAuthorityControlForm.Designer.cs">
+      <DependentUpon>RoleAuthorityControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Role\AddRoleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Role\AddRoleForm.Designer.cs">
+      <DependentUpon>AddRoleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Role\RoleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Role\RoleForm.Designer.cs">
+      <DependentUpon>RoleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LocalUser\AddLocalUserMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LocalUser\AddLocalUserMasterForm.Designer.cs">
+      <DependentUpon>AddLocalUserMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LocalUser\LocalUserMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LocalUser\LocalUserMasterForm.Designer.cs">
+      <DependentUpon>LocalUserMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SapUser\AddSapUserMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SapUser\AddSapUserMasterForm.Designer.cs">
+      <DependentUpon>AddSapUserMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SapUser\SapUserMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SapUser\SapUserMasterForm.Designer.cs">
+      <DependentUpon>SapUserMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Shelf\AddShelfForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Shelf\AddShelfForm.Designer.cs">
+      <DependentUpon>AddShelfForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Shelf\ShelfForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Shelf\ShelfForm.Designer.cs">
+      <DependentUpon>ShelfForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\UserFactory\UserFactoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\UserFactory\UserFactoryForm.Designer.cs">
+      <DependentUpon>UserFactoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\UserRole\UserRoleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\UserRole\UserRoleForm.Designer.cs">
+      <DependentUpon>UserRoleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\User\AddUserMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\User\AddUserMasterForm.Designer.cs">
+      <DependentUpon>AddUserMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\User\UserMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\User\UserMasterForm.Designer.cs">
+      <DependentUpon>UserMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\WarehouseArea\AddAreaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\WarehouseArea\AddAreaForm.Designer.cs">
+      <DependentUpon>AddAreaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\WarehouseArea\AreaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\WarehouseArea\AreaForm.designer.cs">
+      <DependentUpon>AreaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalMasterDataTypeEnum.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Vo\AreaVo.cs" />
+    <Compile Include="Vo\AuthorityControlVo.cs" />
+    <Compile Include="Vo\BuildingVo.cs" />
+    <Compile Include="Vo\CastingMachineFurnaceVo.cs" />
+    <Compile Include="Vo\CastingMachineVo.cs" />
+    <Compile Include="Vo\CauseVo.cs" />
+    <Compile Include="Vo\CavityVo.cs" />
+    <Compile Include="Vo\CountryLanguageVo.cs" />
+    <Compile Include="Vo\CustomerVo.cs" />
+    <Compile Include="Vo\DefectiveReasonVo.cs" />
+    <Compile Include="Vo\DrawProcessVo.cs" />
+    <Compile Include="Vo\DrawVo.cs" />
+    <Compile Include="Vo\EmployeeVo.cs" />
+    <Compile Include="Vo\EquipmentVo.cs" />
+    <Compile Include="Vo\FactoryVo.cs" />
+    <Compile Include="Vo\GroupMachineVo.cs" />
+    <Compile Include="Vo\ItemProcessWorkVo.cs" />
+    <Compile Include="Vo\ItemVo.cs" />
+    <Compile Include="Vo\InventoryReasonVo.cs" />
+    <Compile Include="Vo\JigCauseVo.cs" />
+    <Compile Include="Vo\JigResponseVo.cs" />
+    <Compile Include="Vo\DefectiveCategoryVo.cs" />
+    <Compile Include="Vo\LocalSupplierCavityVo.cs" />
+    <Compile Include="Vo\LocationVo.cs" />
+    <Compile Include="Vo\ModelLineVo.cs" />
+    <Compile Include="Vo\MachineAndEquipmentVo.cs" />
+    <Compile Include="Vo\ModelProcessVo.cs" />
+    <Compile Include="Vo\ModelVo.cs" />
+    <Compile Include="Vo\PaletteVo.cs" />
+    <Compile Include="Vo\ProcessFlowRuleVo.cs" />
+    <Compile Include="Vo\LocalSupplier.cs" />
+    <Compile Include="Vo\MasterMntCommonInVo.cs" />
+    <Compile Include="Vo\MoldTypeVo.cs" />
+    <Compile Include="Vo\MoldVo.cs" />
+    <Compile Include="Vo\ProcessDefectiveReasonVo.cs" />
+    <Compile Include="Vo\MachineVo.cs" />
+    <Compile Include="Vo\LineVo.cs" />
+    <Compile Include="Vo\ProcessVo.cs" />
+    <Compile Include="Vo\ProcessWorkLineVo.cs" />
+    <Compile Include="Vo\ProcessWorkLocalSupplierVo.cs" />
+    <Compile Include="Vo\ProcessWorkMachineVo.cs" />
+    <Compile Include="Vo\ProcessWorkVo.cs" />
+    <Compile Include="Vo\ProdutionWorkContentTypeVo.cs" />
+    <Compile Include="Vo\ProdutionWorkContentVo.cs" />
+    <Compile Include="Vo\ResponseMachineVo.cs" />
+    <Compile Include="Vo\RoleAuthorityControlVo.cs" />
+    <Compile Include="Vo\RoleVo.cs" />
+    <Compile Include="Vo\ShelfVo.cs" />
+    <Compile Include="Vo\UserFactoryVo.cs" />
+    <Compile Include="Vo\UserRoleVo.cs" />
+    <Compile Include="Vo\SapUserVo.cs" />
+    <Compile Include="Vo\UserVo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\GlobalMasterMaintenance.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\GlobalMasterMaintenance.csprojResolveAssemblyReference.cache" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form\AuthorityControl\AddAuthorityControlForm.ja-JP.resx">
+      <DependentUpon>AddAuthorityControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AuthorityControl\AddAuthorityControlForm.resx">
+      <DependentUpon>AddAuthorityControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AuthorityControl\AddAuthorityControlForm.vi.resx">
+      <DependentUpon>AddAuthorityControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AuthorityControl\AddAuthorityControlForm.zh-Hans.resx">
+      <DependentUpon>AddAuthorityControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AuthorityControl\AuthorityControlForm.ja-JP.resx">
+      <DependentUpon>AuthorityControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AuthorityControl\AuthorityControlForm.resx">
+      <DependentUpon>AuthorityControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AuthorityControl\AuthorityControlForm.vi.resx">
+      <DependentUpon>AuthorityControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AuthorityControl\AuthorityControlForm.zh-Hans.resx">
+      <DependentUpon>AuthorityControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Building\AddBuildingForm.resx">
+      <DependentUpon>AddBuildingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Building\BuildingForm.ja-JP.resx">
+      <DependentUpon>BuildingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Building\BuildingForm.resx">
+      <DependentUpon>BuildingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Building\BuildingForm.zh-Hans.resx">
+      <DependentUpon>BuildingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CastingMachineFurnace\AddCastingMachineFurnaceForm.ja-JP.resx">
+      <DependentUpon>AddCastingMachineFurnaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CastingMachineFurnace\AddCastingMachineFurnaceForm.resx">
+      <DependentUpon>AddCastingMachineFurnaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CastingMachineFurnace\AddCastingMachineFurnaceForm.zh-Hans.resx">
+      <DependentUpon>AddCastingMachineFurnaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CastingMachineFurnace\CastingMachineFurnaceForm.ja-JP.resx">
+      <DependentUpon>CastingMachineFurnaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CastingMachineFurnace\CastingMachineFurnaceForm.resx">
+      <DependentUpon>CastingMachineFurnaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CastingMachineFurnace\CastingMachineFurnaceForm.zh-Hans.resx">
+      <DependentUpon>CastingMachineFurnaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CastingMachine\AddCastingMachineForm.ja-JP.resx">
+      <DependentUpon>AddCastingMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CastingMachine\AddCastingMachineForm.resx">
+      <DependentUpon>AddCastingMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CastingMachine\AddCastingMachineForm.zh-Hans.resx">
+      <DependentUpon>AddCastingMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CastingMachine\CastingMachineForm.ja-JP.resx">
+      <DependentUpon>CastingMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CastingMachine\CastingMachineForm.resx">
+      <DependentUpon>CastingMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CastingMachine\CastingMachineForm.zh-Hans.resx">
+      <DependentUpon>CastingMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CauseMaster\CauseMasterForm.resx">
+      <DependentUpon>CauseMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CauseMaster\CauseMasterForm.vi.resx">
+      <DependentUpon>CauseMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CauseMaster\CauseMasterForm.zh-Hans.resx">
+      <DependentUpon>CauseMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Cavity\AddCavityForm.ja-JP.resx">
+      <DependentUpon>AddCavityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Cavity\AddCavityForm.resx">
+      <DependentUpon>AddCavityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Cavity\AddCavityForm.zh-Hans.resx">
+      <DependentUpon>AddCavityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Cavity\CavityForm.ja-JP.resx">
+      <DependentUpon>CavityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Cavity\CavityForm.resx">
+      <DependentUpon>CavityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Cavity\CavityForm.zh-Hans.resx">
+      <DependentUpon>CavityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CountryLanguage\AddCountryLanguageForm.ja-JP.resx">
+      <DependentUpon>AddCountryLanguageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CountryLanguage\AddCountryLanguageForm.resx">
+      <DependentUpon>AddCountryLanguageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CountryLanguage\AddCountryLanguageForm.vi.resx">
+      <DependentUpon>AddCountryLanguageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CountryLanguage\AddCountryLanguageForm.zh-Hans.resx">
+      <DependentUpon>AddCountryLanguageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CountryLanguage\CountryLanguageForm.ja-JP.resx">
+      <DependentUpon>CountryLanguageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CountryLanguage\CountryLanguageForm.resx">
+      <DependentUpon>CountryLanguageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CountryLanguage\CountryLanguageForm.vi.resx">
+      <DependentUpon>CountryLanguageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CountryLanguage\CountryLanguageForm.zh-Hans.resx">
+      <DependentUpon>CountryLanguageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Customer\AddCustomerMasterForm.ja-JP.resx">
+      <DependentUpon>AddCustomerMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Customer\AddCustomerMasterForm.resx">
+      <DependentUpon>AddCustomerMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Customer\AddCustomerMasterForm.vi-VN.resx">
+      <DependentUpon>AddCustomerMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Customer\AddCustomerMasterForm.zh-Hans.resx">
+      <DependentUpon>AddCustomerMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Customer\CustomerMasterForm.ja-JP.resx">
+      <DependentUpon>CustomerMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Customer\CustomerMasterForm.resx">
+      <DependentUpon>CustomerMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Customer\CustomerMasterForm.vi-VN.resx">
+      <DependentUpon>CustomerMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Customer\CustomerMasterForm.zh-Hans.resx">
+      <DependentUpon>CustomerMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DefectiveReason\AddDefectiveReasonForm.ja-JP.resx">
+      <DependentUpon>AddDefectiveReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DefectiveReason\AddDefectiveReasonForm.resx">
+      <DependentUpon>AddDefectiveReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DefectiveReason\AddDefectiveReasonForm.vi.resx">
+      <DependentUpon>AddDefectiveReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DefectiveReason\AddDefectiveReasonForm.zh-Hans.resx">
+      <DependentUpon>AddDefectiveReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DefectiveReason\DefectiveReasonForm.ja-JP.resx">
+      <DependentUpon>DefectiveReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DefectiveReason\DefectiveReasonForm.resx">
+      <DependentUpon>DefectiveReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DefectiveReason\DefectiveReasonForm.vi.resx">
+      <DependentUpon>DefectiveReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DefectiveReason\DefectiveReasonForm.zh-Hans.resx">
+      <DependentUpon>DefectiveReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DrawMaster\AddDrawMasterForm.resx">
+      <DependentUpon>AddDrawMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DrawMaster\AddDrawMasterForm.vi.resx">
+      <DependentUpon>AddDrawMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DrawMaster\AddDrawMasterForm.zh-Hans.resx">
+      <DependentUpon>AddDrawMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DrawMaster\DrawMasterForm.resx">
+      <DependentUpon>DrawMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DrawMaster\DrawMasterForm.vi.resx">
+      <DependentUpon>DrawMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DrawMaster\DrawMasterForm.zh-Hans.resx">
+      <DependentUpon>DrawMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Equipment\AddEquipmentForm.ja-JP.resx">
+      <DependentUpon>AddEquipmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Equipment\AddEquipmentForm.resx">
+      <DependentUpon>AddEquipmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Equipment\AddEquipmentForm.vi.resx">
+      <DependentUpon>AddEquipmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Equipment\AddEquipmentForm.zh-Hans.resx">
+      <DependentUpon>AddEquipmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Equipment\EquipmentForm.ja-JP.resx">
+      <DependentUpon>EquipmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Equipment\EquipmentForm.resx">
+      <DependentUpon>EquipmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Equipment\EquipmentForm.vi.resx">
+      <DependentUpon>EquipmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Equipment\EquipmentForm.zh-Hans.resx">
+      <DependentUpon>EquipmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Factory\AddFactoryMasterForm.vi-VN.resx">
+      <DependentUpon>AddFactoryMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Factory\AddFactoryMasterForm.zh-CHS.resx">
+      <DependentUpon>AddFactoryMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Factory\AddFactoryMasterForm.zh-Hans.resx">
+      <DependentUpon>AddFactoryMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Factory\FactoryMasterForm.vi-VN.resx">
+      <DependentUpon>FactoryMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Factory\FactoryMasterForm.zh-Hans.resx">
+      <DependentUpon>FactoryMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormCommonNCVP.resx">
+      <DependentUpon>FormCommonNCVP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\GroupMachine\AddGroupMachineForm.resx">
+      <DependentUpon>AddGroupMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\GroupMachine\AddGroupMachineForm.vi-VN.resx">
+      <DependentUpon>AddGroupMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\GroupMachine\AddGroupMachineForm.zh-Hans.resx">
+      <DependentUpon>AddGroupMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\GroupMachine\GroupMachineForm.resx">
+      <DependentUpon>GroupMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\GroupMachine\GroupMachineForm.vi-VN.resx">
+      <DependentUpon>GroupMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\GroupMachine\GroupMachineForm.zh-Hans.resx">
+      <DependentUpon>GroupMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\InventoryReason\AddInventoryReasonMasterForm.zh-Hans.resx">
+      <DependentUpon>AddInventoryReasonMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\InventoryReason\InventoryReasonMasterForm.sq-AL.resx">
+      <DependentUpon>InventoryReasonMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\InventoryReason\InventoryReasonMasterForm.zh-Hans.resx">
+      <DependentUpon>InventoryReasonMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ItemProcessWork\ItemProcessWorkForm.ja-JP.resx">
+      <DependentUpon>ItemProcessWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ItemProcessWork\ItemProcessWorkForm.resx">
+      <DependentUpon>ItemProcessWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\InventoryReason\AddInventoryReasonMasterForm.ja-JP.resx">
+      <DependentUpon>AddInventoryReasonMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\InventoryReason\AddInventoryReasonMasterForm.resx">
+      <DependentUpon>AddInventoryReasonMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\InventoryReason\InventoryReasonMasterForm.ja-JP.resx">
+      <DependentUpon>InventoryReasonMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\InventoryReason\InventoryReasonMasterForm.resx">
+      <DependentUpon>InventoryReasonMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ItemProcessWork\ItemProcessWorkForm.zh-Hans.resx">
+      <DependentUpon>ItemProcessWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Item\AddItemForm.zh-Hans.resx">
+      <DependentUpon>AddItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Item\ItemForm.zh-Hans.resx">
+      <DependentUpon>ItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\JigCauseMaster\AddJigCauseMasterForm.resx">
+      <DependentUpon>AddJigCauseMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\JigCauseMaster\AddJigCauseMasterForm.vi-VN.resx">
+      <DependentUpon>AddJigCauseMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\JigCauseMaster\AddJigCauseMasterForm.zh-Hans.resx">
+      <DependentUpon>AddJigCauseMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\JigCauseMaster\JigCauseMasterForm.resx">
+      <DependentUpon>JigCauseMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\JigCauseMaster\JigCauseMasterForm.vi-VN.resx">
+      <DependentUpon>JigCauseMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\JigCauseMaster\JigCauseMasterForm.zh-Hans.resx">
+      <DependentUpon>JigCauseMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\JigResponseMaster\AddJigResponseMasterForm.resx">
+      <DependentUpon>AddJigResponseMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\JigResponseMaster\AddJigResponseMasterForm.vi-VN.resx">
+      <DependentUpon>AddJigResponseMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\JigResponseMaster\JigResponseMasterForm.resx">
+      <DependentUpon>JigResponseMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\JigResponseMaster\JigResponseMasterForm.vi-VN.resx">
+      <DependentUpon>JigResponseMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Employee\AddEmployeeMasterForm.ja-JP.resx">
+      <DependentUpon>AddEmployeeMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Employee\AddEmployeeMasterForm.resx">
+      <DependentUpon>AddEmployeeMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Employee\AddEmployeeMasterForm.vi-VN.resx">
+      <DependentUpon>AddEmployeeMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Employee\AddEmployeeMasterForm.zh-Hans.resx">
+      <DependentUpon>AddEmployeeMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Employee\EmployeeMasterForm.ja-JP.resx">
+      <DependentUpon>EmployeeMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Employee\EmployeeMasterForm.resx">
+      <DependentUpon>EmployeeMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Employee\EmployeeMasterForm.vi-VN.resx">
+      <DependentUpon>EmployeeMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Employee\EmployeeMasterForm.zh-Hans.resx">
+      <DependentUpon>EmployeeMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DefectiveCategory\AddDefectiveCategoryForm.ja-JP.resx">
+      <DependentUpon>AddDefectiveCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DefectiveCategory\AddDefectiveCategoryForm.resx">
+      <DependentUpon>AddDefectiveCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DefectiveCategory\AddDefectiveCategoryForm.vi-VN.resx">
+      <DependentUpon>AddDefectiveCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DefectiveCategory\AddDefectiveCategoryForm.zh-Hans.resx">
+      <DependentUpon>AddDefectiveCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DefectiveCategory\DefectiveCategoryForm.ja-JP.resx">
+      <DependentUpon>DefectiveCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DefectiveCategory\DefectiveCategoryForm.resx">
+      <DependentUpon>DefectiveCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DefectiveCategory\DefectiveCategoryForm.vi-VN.resx">
+      <DependentUpon>DefectiveCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DefectiveCategory\DefectiveCategoryForm.zh-Hans.resx">
+      <DependentUpon>DefectiveCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Line\AddLineMasterForm.ja-JP.resx">
+      <DependentUpon>AddLineMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Line\AddLineMasterForm.resx">
+      <DependentUpon>AddLineMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Line\AddLineMasterForm.vi-VN.resx">
+      <DependentUpon>AddLineMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Line\AddLineMasterForm.zh-Hans.resx">
+      <DependentUpon>AddLineMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Line\LineMasterForm.ja-JP.resx">
+      <DependentUpon>LineMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Line\LineMasterForm.resx">
+      <DependentUpon>LineMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Factory\AddFactoryMasterForm.ja-JP.resx">
+      <DependentUpon>AddFactoryMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Factory\AddFactoryMasterForm.resx">
+      <DependentUpon>AddFactoryMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Factory\FactoryMasterForm.ja-JP.resx">
+      <DependentUpon>FactoryMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Factory\FactoryMasterForm.resx">
+      <DependentUpon>FactoryMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormCommonMaster.ja-JP.resx">
+      <DependentUpon>FormCommonMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormCommonMaster.resx">
+      <DependentUpon>FormCommonMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Item\AddItemForm.ja-JP.resx">
+      <DependentUpon>AddItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Item\AddItemForm.resx">
+      <DependentUpon>AddItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Item\ItemForm.ja-JP.resx">
+      <DependentUpon>ItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Item\ItemForm.resx">
+      <DependentUpon>ItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Line\LineMasterForm.vi-VN.resx">
+      <DependentUpon>LineMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Line\LineMasterForm.zh-Hans.resx">
+      <DependentUpon>LineMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalSupplierCavity\AddLocalSupplierCavityForm.ca.resx">
+      <DependentUpon>AddLocalSupplierCavityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalSupplierCavity\AddLocalSupplierCavityForm.ja-JP.resx">
+      <DependentUpon>AddLocalSupplierCavityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalSupplierCavity\AddLocalSupplierCavityForm.resx">
+      <DependentUpon>AddLocalSupplierCavityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalSupplierCavity\AddLocalSupplierCavityForm.zh-Hans.resx">
+      <DependentUpon>AddLocalSupplierCavityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalSupplierCavity\LocalSupplierCavityForm.ja-JP.resx">
+      <DependentUpon>LocalSupplierCavityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalSupplierCavity\LocalSupplierCavityForm.resx">
+      <DependentUpon>LocalSupplierCavityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalSupplierCavity\LocalSupplierCavityForm.zh-Hans.resx">
+      <DependentUpon>LocalSupplierCavityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalSupplier\AddLocalSupplierForm.vi-VN.resx">
+      <DependentUpon>AddLocalSupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalSupplier\AddLocalSupplierForm.zh-Hans.resx">
+      <DependentUpon>AddLocalSupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalSupplier\LocalSupplierForm.vi-VN.resx">
+      <DependentUpon>LocalSupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalSupplier\LocalSupplierForm.zh-Hans.resx">
+      <DependentUpon>LocalSupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Location\AddLocationForm.ja-JP.resx">
+      <DependentUpon>AddLocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Location\AddLocationForm.resx">
+      <DependentUpon>AddLocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Location\AddLocationForm.zh-Hans.resx">
+      <DependentUpon>AddLocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Location\LocationForm.ja-JP.resx">
+      <DependentUpon>LocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Location\LocationForm.resx">
+      <DependentUpon>LocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Location\LocationForm.zh-Hans.resx">
+      <DependentUpon>LocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MachineAndEquipmentMaster\MachineAndEquipmentMaster.resx">
+      <DependentUpon>MachineAndEquipmentMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MachineAndEquipmentMaster\MachineAndEquipmentMaster.vi-VN.resx">
+      <DependentUpon>MachineAndEquipmentMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Machine\AddMachineForm.vi-VN.resx">
+      <DependentUpon>AddMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Machine\AddMachineForm.zh-Hans.resx">
+      <DependentUpon>AddMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Machine\AddMachineForm.zh.resx">
+      <DependentUpon>AddMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Machine\MachineForm.vi-VN.resx">
+      <DependentUpon>MachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Machine\MachineForm.zh-Hans.resx">
+      <DependentUpon>MachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Machine\MachineForm.zh.resx">
+      <DependentUpon>MachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ModelLineMater\ModelLineMasterForm.resx">
+      <DependentUpon>ModelLineMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ModelLineMater\ModelLineMasterForm.vi-VN.resx">
+      <DependentUpon>ModelLineMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ModelLineMater\ModelLineMasterForm.zh-Hans.resx">
+      <DependentUpon>ModelLineMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ModelMaster\AddModelMasterForm.resx">
+      <DependentUpon>AddModelMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ModelMaster\AddModelMasterForm.vi-VN.resx">
+      <DependentUpon>AddModelMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ModelMaster\AddModelMasterForm.zh-Hans.resx">
+      <DependentUpon>AddModelMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ModelMaster\ModelMasterForm.resx">
+      <DependentUpon>ModelMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ModelMaster\ModelMasterForm.vi-VN.resx">
+      <DependentUpon>ModelMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ModelMaster\ModelMasterForm.zh-Hans.resx">
+      <DependentUpon>ModelMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ModelProcessMaster\ModelProcessMasterForm.resx">
+      <DependentUpon>ModelProcessMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ModelProcessMaster\ModelProcessMasterForm.vi-VN.resx">
+      <DependentUpon>ModelProcessMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ModelProcessMaster\ModelProcessMasterForm.zh-Hans.resx">
+      <DependentUpon>ModelProcessMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MoldType\AddMoldTypeForm.zh-Hans.resx">
+      <DependentUpon>AddMoldTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MoldType\MoldTypeForm.zh-Hans.resx">
+      <DependentUpon>MoldTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Mold\AddMoldForm.zh-Hans.resx">
+      <DependentUpon>AddMoldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Mold\AddMoldForm.zh.resx">
+      <DependentUpon>AddMoldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Mold\MoldForm.zh-Hans.resx">
+      <DependentUpon>MoldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Mold\MoldForm.zh.resx">
+      <DependentUpon>MoldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Palette\AddPaletteForm.ja-JP.resx">
+      <DependentUpon>AddPaletteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Palette\AddPaletteForm.resx">
+      <DependentUpon>AddPaletteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Palette\AddPaletteForm.zh-Hans.resx">
+      <DependentUpon>AddPaletteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Palette\PaletteForm.ja-JP.resx">
+      <DependentUpon>PaletteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Palette\PaletteForm.resx">
+      <DependentUpon>PaletteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Palette\PaletteForm.zh-Hans.resx">
+      <DependentUpon>PaletteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessDefectiveReason\ProcessDefectiveReasonForm.zh-Hans.resx">
+      <DependentUpon>ProcessDefectiveReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessDefectiveReason\ProcessDefectiveReasonForm.zh.resx">
+      <DependentUpon>ProcessDefectiveReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessFlowRule\AddProcessFlowRuleForm.ja-JP.resx">
+      <DependentUpon>AddProcessFlowRuleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessFlowRule\AddProcessFlowRuleForm.resx">
+      <DependentUpon>AddProcessFlowRuleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessFlowRule\AddProcessFlowRuleForm.zh-CHS.resx">
+      <DependentUpon>AddProcessFlowRuleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessFlowRule\AddProcessFlowRuleForm.zh-Hans.resx">
+      <DependentUpon>AddProcessFlowRuleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessFlowRule\ProcessFlowRuleForm.ja-JP.resx">
+      <DependentUpon>ProcessFlowRuleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessFlowRule\ProcessFlowRuleForm.resx">
+      <DependentUpon>ProcessFlowRuleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalSupplier\AddLocalSupplierForm.ja-JP.resx">
+      <DependentUpon>AddLocalSupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalSupplier\AddLocalSupplierForm.resx">
+      <DependentUpon>AddLocalSupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalSupplier\LocalSupplierForm.ja-JP.resx">
+      <DependentUpon>LocalSupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalSupplier\LocalSupplierForm.resx">
+      <DependentUpon>LocalSupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MoldType\AddMoldTypeForm.ja-JP.resx">
+      <DependentUpon>AddMoldTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MoldType\AddMoldTypeForm.resx">
+      <DependentUpon>AddMoldTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MoldType\MoldTypeForm.ja-JP.resx">
+      <DependentUpon>MoldTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MoldType\MoldTypeForm.resx">
+      <DependentUpon>MoldTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Mold\AddMoldForm.ja-JP.resx">
+      <DependentUpon>AddMoldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Mold\AddMoldForm.resx">
+      <DependentUpon>AddMoldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Mold\MoldForm.ja-JP.resx">
+      <DependentUpon>MoldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Mold\MoldForm.resx">
+      <DependentUpon>MoldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Machine\AddMachineForm.ja-JP.resx">
+      <DependentUpon>AddMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Machine\AddMachineForm.resx">
+      <DependentUpon>AddMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Machine\MachineForm.ja-JP.resx">
+      <DependentUpon>MachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Machine\MachineForm.resx">
+      <DependentUpon>MachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessDefectiveReason\ProcessDefectiveReasonForm.ja-JP.resx">
+      <DependentUpon>ProcessDefectiveReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessDefectiveReason\ProcessDefectiveReasonForm.resx">
+      <DependentUpon>ProcessDefectiveReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessFlowRule\ProcessFlowRuleForm.zh-Hans.resx">
+      <DependentUpon>ProcessFlowRuleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWorkLine\ProcessWorkLineForm.ja-JP.resx">
+      <DependentUpon>ProcessWorkLineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWorkLine\ProcessWorkLineForm.resx">
+      <DependentUpon>ProcessWorkLineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWorkLine\ProcessWorkLineForm.vi-VN.resx">
+      <DependentUpon>ProcessWorkLineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWorkLine\ProcessWorkLineForm.zh-Hans.resx">
+      <DependentUpon>ProcessWorkLineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWorkLine\ProcessWorkLineForm.zh.resx">
+      <DependentUpon>ProcessWorkLineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWorkLocalSupplier\ProcessWorkLocalSupplierForm.ja-JP.resx">
+      <DependentUpon>ProcessWorkLocalSupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWorkLocalSupplier\ProcessWorkLocalSupplierForm.resx">
+      <DependentUpon>ProcessWorkLocalSupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWorkLocalSupplier\ProcessWorkLocalSupplierForm.zh-Hans.resx">
+      <DependentUpon>ProcessWorkLocalSupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWorkMachine\ProcessWorkMachineForm.ja-JP.resx">
+      <DependentUpon>ProcessWorkMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWorkMachine\ProcessWorkMachineForm.resx">
+      <DependentUpon>ProcessWorkMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWorkMachine\ProcessWorkMachineForm.vi-VN.resx">
+      <DependentUpon>ProcessWorkMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWorkMachine\ProcessWorkMachineForm.zh-Hans.resx">
+      <DependentUpon>ProcessWorkMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWorkMachine\ProcessWorkMachineForm.zh.resx">
+      <DependentUpon>ProcessWorkMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWork\AddProcessWorkForm.ja-JP.resx">
+      <DependentUpon>AddProcessWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWork\AddProcessWorkForm.resx">
+      <DependentUpon>AddProcessWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWork\AddProcessWorkForm.vi-VN.resx">
+      <DependentUpon>AddProcessWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWork\AddProcessWorkForm.zh-Hans.resx">
+      <DependentUpon>AddProcessWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWork\AddProcessWorkForm.zh.resx">
+      <DependentUpon>AddProcessWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWork\ProcessWorkForm.ja-JP.resx">
+      <DependentUpon>ProcessWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWork\ProcessWorkForm.resx">
+      <DependentUpon>ProcessWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWork\ProcessWorkForm.vi-VN.resx">
+      <DependentUpon>ProcessWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWork\ProcessWorkForm.zh-Hans.resx">
+      <DependentUpon>ProcessWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcessWork\ProcessWorkForm.zh.resx">
+      <DependentUpon>ProcessWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Process\AddProcessForm.ja-JP.resx">
+      <DependentUpon>AddProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Process\AddProcessForm.resx">
+      <DependentUpon>AddProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Process\AddProcessForm.vi-VN.resx">
+      <DependentUpon>AddProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Process\AddProcessForm.zh-Hans.resx">
+      <DependentUpon>AddProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Process\ProcessForm.ja-JP.resx">
+      <DependentUpon>ProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Process\ProcessForm.resx">
+      <DependentUpon>ProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Process\ProcessForm.vi-VN.resx">
+      <DependentUpon>ProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Process\ProcessForm.zh-Hans.resx">
+      <DependentUpon>ProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProdutionWorkContentType\AddProdutionWorkContentTypeForm.resx">
+      <DependentUpon>AddProdutionWorkContentTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProdutionWorkContentType\AddProdutionWorkContentTypeForm.vi-VN.resx">
+      <DependentUpon>AddProdutionWorkContentTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProdutionWorkContentType\AddProdutionWorkContentTypeForm.zh-Hans.resx">
+      <DependentUpon>AddProdutionWorkContentTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProdutionWorkContentType\ProdutionWorkContentTypeForm.resx">
+      <DependentUpon>ProdutionWorkContentTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProdutionWorkContentType\ProdutionWorkContentTypeForm.vi-VN.resx">
+      <DependentUpon>ProdutionWorkContentTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProdutionWorkContentType\ProdutionWorkContentTypeForm.zh-Hans.resx">
+      <DependentUpon>ProdutionWorkContentTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProdutionWorkContent\AddProdutionWorkContentForm.resx">
+      <DependentUpon>AddProdutionWorkContentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProdutionWorkContent\AddProdutionWorkContentForm.vi-VN.resx">
+      <DependentUpon>AddProdutionWorkContentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProdutionWorkContent\AddProdutionWorkContentForm.zh-Hans.resx">
+      <DependentUpon>AddProdutionWorkContentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProdutionWorkContent\ProdutionWorkContentForm.resx">
+      <DependentUpon>ProdutionWorkContentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProdutionWorkContent\ProdutionWorkContentForm.vi-VN.resx">
+      <DependentUpon>ProdutionWorkContentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProdutionWorkContent\ProdutionWorkContentForm.zh-Hans.resx">
+      <DependentUpon>ProdutionWorkContentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ResponseMachine\ResponseMachineMasterForm.resx">
+      <DependentUpon>ResponseMachineMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ResponseMachine\ResponseMachineMasterForm.vi-VN.resx">
+      <DependentUpon>ResponseMachineMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\RoleAuthorityControl\RoleAuthorityControlForm.ja-JP.resx">
+      <DependentUpon>RoleAuthorityControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\RoleAuthorityControl\RoleAuthorityControlForm.resx">
+      <DependentUpon>RoleAuthorityControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\RoleAuthorityControl\RoleAuthorityControlForm.vi-VN.resx">
+      <DependentUpon>RoleAuthorityControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\RoleAuthorityControl\RoleAuthorityControlForm.zh-Hans.resx">
+      <DependentUpon>RoleAuthorityControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Role\AddRoleForm.ca.resx">
+      <DependentUpon>AddRoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Role\AddRoleForm.ja-JP.resx">
+      <DependentUpon>AddRoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Role\AddRoleForm.resx">
+      <DependentUpon>AddRoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Role\AddRoleForm.vi-VN.resx">
+      <DependentUpon>AddRoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Role\AddRoleForm.zh-Hans.resx">
+      <DependentUpon>AddRoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Role\RoleForm.ja-JP.resx">
+      <DependentUpon>RoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Role\RoleForm.resx">
+      <DependentUpon>RoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Role\RoleForm.vi-VN.resx">
+      <DependentUpon>RoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Role\RoleForm.zh-Hans.resx">
+      <DependentUpon>RoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalUser\AddLocalUserMasterForm.ja-JP.resx">
+      <DependentUpon>AddLocalUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalUser\AddLocalUserMasterForm.resx">
+      <DependentUpon>AddLocalUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalUser\AddLocalUserMasterForm.vi-VN.resx">
+      <DependentUpon>AddLocalUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalUser\AddLocalUserMasterForm.zh-Hans.resx">
+      <DependentUpon>AddLocalUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalUser\LocalUserMasterForm.ja-JP.resx">
+      <DependentUpon>LocalUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalUser\LocalUserMasterForm.resx">
+      <DependentUpon>LocalUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalUser\LocalUserMasterForm.vi-VN.resx">
+      <DependentUpon>LocalUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LocalUser\LocalUserMasterForm.zh-Hans.resx">
+      <DependentUpon>LocalUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SapUser\AddSapUserMasterForm.ja-JP.resx">
+      <DependentUpon>AddSapUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SapUser\AddSapUserMasterForm.resx">
+      <DependentUpon>AddSapUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SapUser\AddSapUserMasterForm.vi-VN.resx">
+      <DependentUpon>AddSapUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SapUser\AddSapUserMasterForm.zh-Hans.resx">
+      <DependentUpon>AddSapUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SapUser\AddSapUserMasterForm.zh.resx">
+      <DependentUpon>AddSapUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SapUser\SapUserMasterForm.ja-JP.resx">
+      <DependentUpon>SapUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SapUser\SapUserMasterForm.resx">
+      <DependentUpon>SapUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SapUser\SapUserMasterForm.vi-VN.resx">
+      <DependentUpon>SapUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SapUser\SapUserMasterForm.zh-Hans.resx">
+      <DependentUpon>SapUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SapUser\SapUserMasterForm.zh.resx">
+      <DependentUpon>SapUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Shelf\AddShelfForm.ja-JP.resx">
+      <DependentUpon>AddShelfForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Shelf\AddShelfForm.resx">
+      <DependentUpon>AddShelfForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Shelf\AddShelfForm.zh-Hans.resx">
+      <DependentUpon>AddShelfForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Shelf\ShelfForm.ja-JP.resx">
+      <DependentUpon>ShelfForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Shelf\ShelfForm.resx">
+      <DependentUpon>ShelfForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Shelf\ShelfForm.zh-Hans.resx">
+      <DependentUpon>ShelfForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UserFactory\UserFactoryForm.ca.resx">
+      <DependentUpon>UserFactoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UserFactory\UserFactoryForm.ja-JP.resx">
+      <DependentUpon>UserFactoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UserFactory\UserFactoryForm.resx">
+      <DependentUpon>UserFactoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UserFactory\UserFactoryForm.vi-VN.resx">
+      <DependentUpon>UserFactoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UserFactory\UserFactoryForm.zh-Hans.resx">
+      <DependentUpon>UserFactoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UserRole\UserRoleForm.ja-JP.resx">
+      <DependentUpon>UserRoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UserRole\UserRoleForm.resx">
+      <DependentUpon>UserRoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UserRole\UserRoleForm.vi-VN.resx">
+      <DependentUpon>UserRoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UserRole\UserRoleForm.zh-Hans.resx">
+      <DependentUpon>UserRoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\User\AddUserMasterForm.ja-JP.resx">
+      <DependentUpon>AddUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\User\AddUserMasterForm.resx">
+      <DependentUpon>AddUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\User\AddUserMasterForm.vi-VN.resx">
+      <DependentUpon>AddUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\User\AddUserMasterForm.zh-Hans.resx">
+      <DependentUpon>AddUserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\User\UserMasterForm.ja-JP.resx">
+      <DependentUpon>UserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\User\UserMasterForm.resx">
+      <DependentUpon>UserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\User\UserMasterForm.vi-VN.resx">
+      <DependentUpon>UserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\User\UserMasterForm.zh-Hans.resx">
+      <DependentUpon>UserMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\WarehouseArea\AddAreaForm.ja-JP.resx">
+      <DependentUpon>AddAreaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\WarehouseArea\AddAreaForm.resx">
+      <DependentUpon>AddAreaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\WarehouseArea\AddAreaForm.zh-Hans.resx">
+      <DependentUpon>AddAreaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\WarehouseArea\AreaForm.ja-JP.resx">
+      <DependentUpon>AreaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\WarehouseArea\AreaForm.resx">
+      <DependentUpon>AreaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\WarehouseArea\AreaForm.zh-Hans.resx">
+      <DependentUpon>AreaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddAuthorityControlForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddAuthorityControlForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddAuthorityControlForm.vi.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddAuthorityControlForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddBuildingForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddCastingMachineForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddCastingMachineForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddCastingMachineForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddCastingMachineFurnaceForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddCastingMachineFurnaceForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddCastingMachineFurnaceForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddCavityForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddCavityForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddCavityForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddCountryLanguageForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddCountryLanguageForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddCountryLanguageForm.vi.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddCountryLanguageForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddCustomerMasterForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddCustomerMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddCustomerMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddCustomerMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddDefectiveCategoryForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddDefectiveCategoryForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddDefectiveCategoryForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddDefectiveCategoryForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddDefectiveReasonForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddDefectiveReasonForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddDefectiveReasonForm.vi.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddDefectiveReasonForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddDrawMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddDrawMasterForm.vi.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddDrawMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddEmployeeMasterForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddEmployeeMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddEmployeeMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddEmployeeMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddEquipmentForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddEquipmentForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddEquipmentForm.vi.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddEquipmentForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddFactoryMasterForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddFactoryMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddFactoryMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddFactoryMasterForm.zh-CHS.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddFactoryMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddGroupMachineForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddGroupMachineForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddGroupMachineForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddInventoryReasonMasterForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddInventoryReasonMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddInventoryReasonMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddItemForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddItemForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddItemForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddJigCauseMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddJigCauseMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddJigCauseMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddJigResponseMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddJigResponseMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLineMasterForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLineMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLineMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLineMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLocalSupplierCavityForm.ca.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLocalSupplierCavityForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLocalSupplierCavityForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLocalSupplierCavityForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLocalSupplierForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLocalSupplierForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLocalSupplierForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLocalSupplierForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLocalUserMasterForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLocalUserMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLocalUserMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLocalUserMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLocationForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLocationForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddLocationForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddMachineForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddMachineForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddMachineForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddMachineForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddModelMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddModelMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddModelMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddMoldForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddMoldForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddMoldForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddMoldTypeForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddMoldTypeForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddMoldTypeForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddProcessFlowRuleForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddProcessFlowRuleForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddProcessFlowRuleForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddProcessForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddProcessForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddProcessForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddProcessForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddProcessWorkForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddProcessWorkForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddProcessWorkForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddProcessWorkForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddProdutionWorkContentForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddProdutionWorkContentForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddProdutionWorkContentForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddProdutionWorkContentTypeForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddProdutionWorkContentTypeForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddProdutionWorkContentTypeForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddRoleForm.ca.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddRoleForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddRoleForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddRoleForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddRoleForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddUserMasterForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddUserMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddUserMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AddUserMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AuthorityControlForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AuthorityControlForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AuthorityControlForm.vi.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.AuthorityControlForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.BuildingForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.BuildingForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.BuildingForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CastingMachineForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CastingMachineForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CastingMachineForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CastingMachineFurnaceForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CastingMachineFurnaceForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CastingMachineFurnaceForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CauseMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CauseMasterForm.vi.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CauseMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CavityForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CavityForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CavityForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CountryLanguageForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CountryLanguageForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CountryLanguageForm.vi.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CountryLanguageForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CustomerMasterForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CustomerMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CustomerMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.CustomerMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.DefectiveCategoryForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.DefectiveCategoryForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.DefectiveCategoryForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.DefectiveCategoryForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.DefectiveReasonForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.DefectiveReasonForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.DefectiveReasonForm.vi.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.DefectiveReasonForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.DrawMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.DrawMasterForm.vi.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.DrawMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.EmployeeMasterForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.EmployeeMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.EmployeeMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.EmployeeMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.EquipmentForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.EquipmentForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.EquipmentForm.vi.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.EquipmentForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.FactoryMasterForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.FactoryMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.FactoryMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.FactoryMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.FormCommonMaster.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.FormCommonMaster.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.FormCommonNCVP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.GroupMachineForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.GroupMachineForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.GroupMachineForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.InventoryReasonMasterForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.InventoryReasonMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.InventoryReasonMasterForm.sq-AL.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.InventoryReasonMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ItemForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ItemForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ItemForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ItemProcessWorkForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ItemProcessWorkForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ItemProcessWorkForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.JigCauseMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.JigCauseMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.JigCauseMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.JigResponseMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.JigResponseMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LineMasterForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LineMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LineMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LineMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LocalSupplierCavityForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LocalSupplierCavityForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LocalSupplierCavityForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LocalSupplierForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LocalSupplierForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LocalSupplierForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LocalSupplierForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LocalUserMasterForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LocalUserMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LocalUserMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LocalUserMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LocationForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LocationForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.LocationForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.MachineAndEquipmentMaster.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.MachineAndEquipmentMaster.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.MachineForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.MachineForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.MachineForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.MachineForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ModelLineMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ModelLineMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ModelLineMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ModelMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ModelMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ModelMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ModelProcessMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ModelProcessMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ModelProcessMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.MoldForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.MoldForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.MoldForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.MoldTypeForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.MoldTypeForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.MoldTypeForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessDefectiveReasonForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessDefectiveReasonForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessDefectiveReasonForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessFlowRuleForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessFlowRuleForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessFlowRuleForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessWorkForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessWorkForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessWorkForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessWorkForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessWorkLineForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessWorkLineForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessWorkLineForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessWorkLineForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessWorkLocalSupplierForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessWorkLocalSupplierForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessWorkLocalSupplierForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessWorkMachineForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessWorkMachineForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessWorkMachineForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProcessWorkMachineForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProdutionWorkContentForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProdutionWorkContentForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProdutionWorkContentForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProdutionWorkContentTypeForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProdutionWorkContentTypeForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ProdutionWorkContentTypeForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ResponseMachineMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.ResponseMachineMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.RoleAuthorityControlForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.RoleAuthorityControlForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.RoleAuthorityControlForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.RoleAuthorityControlForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.RoleForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.RoleForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.RoleForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.RoleForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.UserFactoryForm.ca.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.UserFactoryForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.UserFactoryForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.UserFactoryForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.UserFactoryForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.UserMasterForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.UserMasterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.UserMasterForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.UserMasterForm.zh-Hans.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.UserRoleForm.ja-JP.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.UserRoleForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.UserRoleForm.vi-VN.resources" />
+    <EmbeddedResource Include="obj\Debug\Com.Nidec.Mes.GlobalMasterMaintenance.UserRoleForm.zh-Hans.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh-Hans.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework\Framework.csproj">
+      <Project>{70465337-66b7-475a-b868-47044855aa90}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\ca\GlobalMasterMaintenance.resources.dll" />
+    <Content Include="obj\Debug\GlobalMasterMaintenance.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\GlobalMasterMaintenance.dll" />
+    <Content Include="obj\Debug\GlobalMasterMaintenance.pdb" />
+    <Content Include="obj\Debug\ja-JP\GlobalMasterMaintenance.resources.dll" />
+    <Content Include="obj\Debug\sq-AL\GlobalMasterMaintenance.resources.dll" />
+    <Content Include="obj\Debug\vi-VN\GlobalMasterMaintenance.resources.dll" />
+    <Content Include="obj\Debug\vi\GlobalMasterMaintenance.resources.dll" />
+    <Content Include="obj\Debug\zh-CHS\GlobalMasterMaintenance.resources.dll" />
+    <Content Include="obj\Debug\zh-Hans\GlobalMasterMaintenance.resources.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
